@@ -1,10 +1,10 @@
 # *Police-Duty-Scheduling*
 ## Title : 
-            CDAC Online Exam Assessment Portal
+            Police-Duty-Scheduling
 ## Client :
-            CDAC
+            Chaturshringi Police Station, Shivajinagar, Pune
 ## Team :  
-            Student,CDAC Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
+            Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
 ## Objective (Purpose) :
             This web application provides the facility to conduct the online examination, evaluate the result and display result in specific time dicided by the CDAC team. The user will be able to register, login & give the exam with specific id. portal will be ensure a exam related common data to student, Also will ensure error free assessment of the exam which is going to be conducted.
 ## Scope :
