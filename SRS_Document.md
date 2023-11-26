@@ -31,7 +31,7 @@
     The evaluated result to be displayed to admin & after accessibility by admin to students.
     The session id will be generated for each student when exam is started, session ID will ensure the exam resumption of the student on the abnormal termination of exam due to server or technical issue.
 
-## NonFunctional Requirement:
+## Non-Functional Requirement:
 
 ### Security
 Registered student will allowed to see the exam update.	
