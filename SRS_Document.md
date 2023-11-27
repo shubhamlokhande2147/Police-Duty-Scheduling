@@ -1,16 +1,17 @@
 # *Police-Duty-Scheduling*
 ## Title : 
-            Police-Duty-Scheduling
+   Police-Duty-Scheduling
 ## Client :
-            Chaturshringi Police Station, Shivajinagar, Pune
+   
+   Chaturshringi Police Station, Shivajinagar, Pune
 ## Team :  
-            Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
+   Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
 ## Objective (Purpose) :
-	     This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
+   This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
 ## Scope :
-            This application can be used in police station as well as corporate world. Police Officers can use the portal at anytime and anywhere also it is web based application. Admin and Attendance masters has previleges to create, modify, view schedules and also police officer view schedules.
-	    The scope of the project is to develop a web-based application that helps police department to maintain their daily duty scheduling records. The application will provide functionalities to register attendance master, police officers to manage scheduling reports for officers.
+   This application can be used in police station as well as corporate world. Police Officers can use the portal at anytime and anywhere also it is web based application. Admin and Attendance masters has previleges to create, modify, view schedules and also police officer view schedules.
+   The scope of the project is to develop a web-based application that helps police department to maintain their daily duty scheduling records. The application will provide functionalities to register attendance master, police officers to manage scheduling reports for officers.
 ## Definition :
 	
 ## Functional Requirements :
