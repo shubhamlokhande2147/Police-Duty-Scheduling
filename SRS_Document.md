@@ -76,7 +76,7 @@ System will designed and developed using reusable, independent senarios in the f
 These modules will be loosely coupled and highly cohesive.
 	
 ### Scalability:
-System will be able  to  provide  consistent user exeprience.
+System will be able  to  provide  consistent user exeprience..
 
 ### Safety:	
 online exam portal will be secure from malicious attack, fishing.
