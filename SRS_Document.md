@@ -6,7 +6,6 @@
 ## Team :  
             Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
 ## Objective (Purpose) :
-          /*  This web application provides the facility to conduct the online examination, evaluate the result and display result in specific time dicided by the CDAC team. The user will be able to register, login & give the exam with specific id. portal will be ensure a exam related common data to student, Also will ensure error free assessment of the exam which is going to be conducted. */
 	     This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
 ## Scope :
@@ -14,12 +13,12 @@
 ## Definition :
 	
 ## Functional Requirements :
-	- Admin :
+ - Admin :
         Admin will be able to login himself. Then admin will register attandance masters. 
 	Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
         Admin has authority to accept or reject officers as well as attendance masters leave. 
 
-        - Attendance Masters :
+ - Attendance Masters :
 	Attendance masters will login himself first, then do many activities. 
  	Attendance masters can change his own authentication credentials. 
 	Attendance masters will register all police officers. 
@@ -28,7 +27,7 @@
         Attendance masters can view list of present officers. 	
 	Attendance masters can generate scheduled duty report.
  
-         - Police Officers : 
+ - Police Officers : 
        	 Police officers will login himself and view scheduled duty report.
 	 Police officers can change his own authentication credentials. 
          Police officers can apply for leave.
