@@ -10,16 +10,17 @@
    This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
 ## Scope :
+ 
    This application can be used in police station as well as corporate world. Police Officers can use the portal at anytime and anywhere also it is web based application. Admin and Attendance masters has previleges to create, modify, view schedules and also police officer view schedules.
    The scope of the project is to develop a web-based application that helps police department to maintain their daily duty scheduling records. The application will provide functionalities to register attendance master, police officers to manage scheduling reports for officers.
 ## Definition :
 	
 ## Functional Requirements :
- - Admin :
+ ###Admin :
 
-      Admin will be able to login himself. Then admin will register attandance masters. 
-      Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
-      Admin has authority to accept or reject officers as well as attendance masters leave. 
+   Admin will be able to login himself. Then admin will register attandance masters. 
+   Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
+   Admin has authority to accept or reject officers as well as attendance masters leave. 
 
  - Attendance Masters :
 	
