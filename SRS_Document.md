@@ -16,7 +16,7 @@
 ## Definition :
 	
 ## Functional Requirements :
- ###Admin :
+ ### Admin :
 
    Admin will be able to login himself. Then admin will register attandance masters. 
    Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
