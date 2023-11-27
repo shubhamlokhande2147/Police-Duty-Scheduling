@@ -23,11 +23,16 @@
 	Student can submit the answers before time or it will be automatically submited.
 	Result will be displayed for student on specific time dicided CDAC cordinator.
 
-    - Admin :
-        Admin will be able to login himself. Then admin will register attandance masters. Admin can also view the daily duty report. If any emergency occcurs, then admin can arrange emergency meet. Admin has authority to accept or reject officers as well as attendance masters leave. 
+        - Admin :
+        Admin will be able to login himself. Then admin will register attandance masters. 
+	Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
+        Admin has authority to accept or reject officers as well as attendance masters leave. 
 
-    - Attendance Masters :
-        
+        - Attendance Masters :
+	Attendance masters will register all police officers. 
+        Attendance masters will insert the list of activities with locations.
+	Attendance masters assign duty to police officers through schedule sheet and also authority to modification in schedule sheet.
+        Attendance masters can view list of present officers. 	
 	
 	- System administrator :
 	CDAC representative should easily check the exam related status of the student.       
