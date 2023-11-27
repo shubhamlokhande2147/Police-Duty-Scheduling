@@ -22,6 +22,12 @@
 	Student can mark, review and change the answer option.
 	Student can submit the answers before time or it will be automatically submited.
 	Result will be displayed for student on specific time dicided CDAC cordinator.
+
+    - Admin :
+        Admin will be able to login himself. Then admin will register attandance masters. Admin can also view the daily duty report. If any emergency occcurs, then admin can arrange emergency meet. Admin has authority to accept or reject officers as well as attendance masters leave. 
+
+    - Attendance Masters :
+        
 	
 	- System administrator :
 	CDAC representative should easily check the exam related status of the student.       
