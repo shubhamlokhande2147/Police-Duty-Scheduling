@@ -9,7 +9,8 @@
 	     This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
 ## Scope :
-            This application can be used in educational institute as well as corporate world. Student can use the portal at anytime and anywhere also it is web based application. System administrator has previleges to create, modify and test paper and topic.
+            This application can be used in police station as well as corporate world. Police Officers can use the portal at anytime and anywhere also it is web based application. Admin and Attendance masters has previleges to create, modify, view schedules and also police officer view schedules.
+	    The scope of the project is to develop a web-based application that helps police department to maintain their daily duty scheduling records. The application will provide functionalities to register attendance master, police officers to manage scheduling reports for officers.
 ## Definition :
 	
 ## Functional Requirements :
@@ -38,11 +39,10 @@
 ## Non-Functional Requirement:
 
 ### Security
-Registered student will allowed to see the exam update.	
-The webside should have authentication process for students while logging.
+Registered officers will allowed to see the generated reports.	
+The website should have authentication process for admin, attendance master, police officers while logging.
 System will automatically log off  all user after some time due to inactiveness.
-Account of student will be blocked by system if it is inavtivated mor than specific time decided by admin.
-System  will internally maintain secure communiction channel between Servers ( Web Servers, App Servers, databse Server)
+System  will internally maintain secure communiction channel between Servers ( Web Servers, App Servers, databse Server ).
 Sensitive data will be always encrypted across communcation.
 User proper firewall to protect servers from out side fishing, velnerable attacks.
 
@@ -52,8 +52,7 @@ Continous updates are matained , continous Adminstration is done to keep system 
 During peak hours system will maintain same user experaince by managing load balacning .
 
 ### Availability
-The assessment portal will be accessible for student - twice in year.
-Duration of accessibility - 2 months [24 x 7].
+Uptime: 24*7 available, 99.999%
 	
 ### Maintainability:
 A database software will be used to maintain System data Persistence.
@@ -62,17 +61,19 @@ Separate enviornment will be maintained for system for isolation in  production,
 
 ### Portablility:
 PDA: Portable Device Application
-Portable divice application system will be provided portable user interface through users will be able to access online exam portal.
-System can be deployed to single server, multi server, to any OS, Cloud (Azure or AWS or GCP)
+Portable divice application system will be provided portable user interface through users will be able to access online web based system.
+System can be deployed to single server, multi server, to any OS, Cloud (Azure or AWS or GCP).
 
 ### Accessibility:
-only registered student will be able to login on website after authentication.
+only registered admin, attendance master and officers will be able to login on website after authentication.
 
 ### Durability:
-Student will able access web application at time of exam duration
+The system will maintain officers details.
+The system will implement backup and recovery for retaining officers data over the time.
+The system will use cache for faster data retrieval and improved performance.
 
 ### Efficiency:
-Maximum number of users  will login to portal at same time.
+Maximum number of officers will login to website at same time.
 System will be able to manage all transactions with isolation.
 
 ### Modularity:
@@ -80,12 +81,10 @@ System will designed and developed using reusable, independent senarios in the f
 These modules will be loosely coupled and highly cohesive.
 	
 ### Scalability:
-System will be able  to  provide  consistent user exeprience..
+The system will provide a consistent user experience to users irrespective of load.
 
 ### Safety:	
-online exam portal will be secure from malicious attack, fishing.
-online exam portal functionalities are protected from outside with firewall configuration.
-online exam portal will be always kept updated with latest anit virus software.
-Student data will be backed up periodically to ensure safty of data using increamental back up strategy.
+The officers' login page will be secure from malicious attacks and phishing.
+Separate environments will be maintained for the system for isolation in production, testing, and development.
 
 
