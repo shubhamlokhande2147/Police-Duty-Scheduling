@@ -20,7 +20,8 @@
 
    Admin will be able to login himself. Then admin will register attandance masters. 
    Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
-   Admin has authority to accept or reject officers as well as attendance masters leave. 
+   Admin has authority to accept or reject officers as well as attendance master leave.
+   Admin has able to create different types of shifts(day,night,overtime).
 
  - Attendance Masters :
 	
@@ -31,6 +32,7 @@
       Attendance masters assign duty to police officers through schedule sheet and also authority to modification in schedule sheet.
       Attendance masters can view list of present officers. 	
       Attendance masters can generate scheduled duty report.
+      
  
  - Police Officers :
    
