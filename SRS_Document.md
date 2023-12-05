@@ -32,7 +32,7 @@
       Attendance masters assign duty to police officers through schedule sheet and also authority to modification in schedule sheet.
       Attendance masters can view list of present officers. 	
       Attendance masters can generate scheduled duty report.
-      He maintained a historical record of schedules and they may change for auditing purpose.
+      He maintained a historical record of schedules and they may use for auditing purpose.
       
  
  - Police Officers :
