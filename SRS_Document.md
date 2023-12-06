@@ -8,10 +8,10 @@ Nowadays police duty scheduling system is register based so we need a system whi
 ## Problem Definition :
   Due to offline duty assigning through register system these are some problems
   - 1.Duty repeatation to single police offcer
-  2.Data is not getting stored Digitally
-  3.Manual duty assigning system confusing and complicated
-  4.Offline Duty scheduling system is time consuming
-  5.Register based system not available globally.
+  - 2.Data is not getting stored Digitally
+  - 3.Manual duty assigning system confusing and complicated
+  - 4.Offline Duty scheduling system is time consuming
+  - 5.Register based system not available globally.
 
 ## Objective (Purpose) :
    This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
