@@ -2,12 +2,12 @@
 ## Title : 
    Police-Duty-Scheduling
 ## Team :  
-   Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
-#Introduction :
-Nowadays police duty scheduling system is register based so we need a system which can 
+   Police,chaturshringi police station Staff Members
+# Introduction :
+Nowadays police duty scheduling system is register based so we need a system which can lead to decrease accuracy,speed,maintanability so we need a online website to handlesuch problems
 ## Problem Definition :
   Due to offline duty assigning through register system these are some problems
-   - Duty repeatation to single police offcer
+  - Duty repeatation to single police offcer
   - Data is not getting stored Digitally
   - Manual duty assigning system confusing and complicated
   - Offline Duty scheduling system is time consuming
