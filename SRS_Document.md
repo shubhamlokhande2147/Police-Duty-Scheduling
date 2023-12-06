@@ -26,27 +26,27 @@ Nowadays police duty scheduling system is register based so we need a system whi
  - Admin :
 
    - Admin will be able to login himself. Then admin will register attandance masters. 
-   - 2.Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
-   - 3.Admin has authority to accept or reject officers as well as attendance master leave.
-   - 4.Admin wii be able to create different types of shifts(day,night,overtime).
+   - Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
+   - Admin has authority to accept or reject officers as well as attendance master leave.
+   - Admin wii be able to create different types of shifts(day,night,overtime).
 
  - Attendance Masters :
 	
-      Attendance masters will login himself first, then do many activities. 
-      Attendance masters can change his own authentication credentials. 
-      Attendance masters will register all police officers. 
-      Attendance masters will insert the list of activities with locations.
-      Attendance masters assign duty to police officers through schedule sheet and also authority to modification in schedule sheet.
-      Attendance masters can view list of present officers. 	
-      Attendance masters can generate scheduled duty report.
-      He maintained a historical record of schedules and they may use for auditing purpose.
+   - Attendance masters will login himself first, then do many activities. 
+   - Attendance masters can change his own authentication credentials. 
+   - Attendance masters will register all police officers. 
+   - Attendance masters will insert the list of activities with locations.
+   - Attendance masters assign duty to police officers through schedule sheet and also authority to modification in schedule sheet.
+   - Attendance masters can view list of present officers. 	
+   - Attendance masters can generate scheduled duty report.
+   - He maintained a historical record of schedules and they may use for auditing purpose.
       
  
  - Police Officers :
    
-      Police officers will login himself and view scheduled duty report.
-      Police officers can change his own authentication credentials. 
-      Police officers can apply for leave.
+  - Police officers will login himself and view scheduled duty report.
+  - Police officers can change his own authentication credentials. 
+  - Police officers can apply for leave.
 
 ## Non-Functional Requirement:
 
