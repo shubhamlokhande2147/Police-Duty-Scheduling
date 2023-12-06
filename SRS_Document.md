@@ -1,11 +1,18 @@
 # *Police-Duty-Scheduling*
 ## Title : 
    Police-Duty-Scheduling
-## Client :
-   
-   Chaturshringi Police Station, Shivajinagar, Pune
 ## Team :  
    Police,chaturshringi police station Staff Members,System Analyst,Business Analyst,Quality Assurance Team,Architect
+#Introduction :
+Nowadays police duty scheduling system is register based so we need a system which can 
+## Problem Definition :
+  Due to offline duty assigning through register system these are some problems
+  1.Duty repeatation to single police offcer
+  2.Data is not getting stored Digitally
+  3.Manual duty assigning system confusing and complicated
+  4.Offline Duty scheduling system is time consuming
+  5.Register based system not available globally.
+
 ## Objective (Purpose) :
    This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
@@ -19,7 +26,8 @@
  - Admin :
 
    Admin will be able to login himself. Then admin will register attandance masters. 
-   Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
+   Admin can also view the daily duty reports. If any emergency occcurs, then admin can 
+   arrange emergency meet. 
    Admin has authority to accept or reject officers as well as attendance master leave.
    Admin has able to create different types of shifts(day,night,overtime).
 
