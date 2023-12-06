@@ -14,7 +14,8 @@ Nowadays police duty scheduling system is register based so we need a system whi
   - Register based system not available globally.
 
 ## Objective (Purpose) :
-   This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
+  - The objective of project is to develop a web based system which will help in duty scheduling without affecting time,location and type of handset barriers.
+  - This web application provides the facility to schedules the police officers daily duties. all officers registration will be done by attendance master. all officers login the website and check itself tommarrow duty.
 
 ## Scope :
  
