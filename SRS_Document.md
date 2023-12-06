@@ -7,7 +7,7 @@
 Nowadays police duty scheduling system is register based so we need a system which can 
 ## Problem Definition :
   Due to offline duty assigning through register system these are some problems
-  - Duty repeatation to single police offcer
+   - Duty repeatation to single police offcer
   - Data is not getting stored Digitally
   - Manual duty assigning system confusing and complicated
   - Offline Duty scheduling system is time consuming
