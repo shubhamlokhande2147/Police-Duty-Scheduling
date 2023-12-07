@@ -90,7 +90,7 @@ The system will use cache for faster data retrieval and improved performance.
 
 ### Efficiency:
 Maximum number of officers will login to website at same time.
-System will be able to manage all transactions with isolation.
+System will be able to manage all transactions with isolation..
 
 ### Modularity:
 System will designed and developed using reusable, independent senarios in the form of modules.
