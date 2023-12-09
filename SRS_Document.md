@@ -1,6 +1,6 @@
-# *Police-Duty-Scheduling*
+# *Secure-Shift-Nexus*
 ## Title : 
-   Police-Duty-Scheduling
+   Secure-Shift-Nexus
 ## Team :  
    Police,chaturshringi police station Staff Members
 # Introduction :
