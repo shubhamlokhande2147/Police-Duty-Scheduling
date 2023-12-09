@@ -4,7 +4,7 @@
 ## Team :  
    Police,chaturshringi police station Staff Members
 # Introduction :
-Nowadays police duty scheduling system is register based so we need a system which can lead to decrease accuracy,speed,maintanability so we need a online website to handle such problems
+Nowadays Secure-Shift-Nexus system is register based so we need a system which can lead to decrease accuracy,speed,maintanability so we need a online website to handle such problems
 ## Problem Definition :
   Due to offline duty assigning through register system these are some problems
   - Duty repeatation to single police officer
