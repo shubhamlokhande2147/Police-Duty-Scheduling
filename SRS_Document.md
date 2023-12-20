@@ -32,7 +32,7 @@ Nowadays Secure-Shift-Nexus system is register based so we need a system which c
    - Admin will be able to login himself. Then admin will register attandance masters. 
    - Admin can also view the daily duty reports. If any emergency occcurs, then admin can arrange emergency meet. 
    - Admin has authority to accept or reject officers as well as attendance master leave.
-   - Admin wii be able to create different types of shifts(day,night,overtime).
+   - Admin wii be able to create different types of shifts(day,night,overtime)..
 
  - Attendance Masters :
 	
