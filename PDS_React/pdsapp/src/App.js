@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import HomeComponent from './pages/HomeComponent';
 import Header from './Components/Header';
 
 import './App.css';
 
 import LoginPage from './pages/LoginPage';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <div className="App">
-     <Header></Header>
      {/* <Header></Header>
       <MainNavBar></MainNavBar>
       <Routes>
@@ -21,8 +20,10 @@ function App() {
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route>
       </Routes>
       <Footer></Footer> */}
+           <Header></Header>
   <HomeComponent></HomeComponent>
   <LoginPage></LoginPage>
+  <Footer></Footer>
   
     </div>
   );
