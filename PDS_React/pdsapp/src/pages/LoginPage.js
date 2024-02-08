@@ -1,53 +1,202 @@
-import React from 'react'
+// import React from 'react'
+// import 'LoginPage.css'
 
-export default function LoginPage() {
-  return (
-   <> <div>Login</div><input type="email"/><br></br>
-     <input type="email"/></> 
+// export default function LoginPage() {
+//   return (
+//   //  <> <div>Login</div><input type="email"/><br></br>
+//   //    <input type="email"/></> 
 
-//      <>              <input type="email"/>
-//      <input type="email"/>
+// //   <form>
+// //   <h3>Sign In</h3>
 
-//      <section class="vh-100" style="background-color: #508bfc;">
-//   <div class="container py-5 h-100">
-//     <div class="row d-flex justify-content-center align-items-center h-100">
-//       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-//         <div class="card shadow-2-strong" style="border-radius: 1rem;">
-//           <div class="card-body p-5 text-center">
+// //   <div className="mb-3">
+// //     <label>Email address</label>
+// //     <input
+// //       type="email"
+// //       className="form-control"
+// //       placeholder="Enter email"
+// //     />
+// //   </div>
 
-//             <h3 class="mb-5">Sign in</h3>
+// //   <div className="mb-3">
+// //     <label>Password</label>
+// //     <input
+// //       type="password"
+// //       className="form-control"
+// //       placeholder="Enter password"
+// //     /> 
+// //   </div>
 
-//             <div class="form-outline mb-4">
-//               <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-//               <label class="form-label" for="typeEmailX-2">Email</label>
+// //   <div className="mb-3">
+// //     <div className="custom-control custom-checkbox">
+// //       <input
+// //         type="checkbox"
+// //         className="custom-control-input"
+// //         id="customCheck1"
+// //       />
+// //       <label className="custom-control-label" htmlFor="customCheck1">
+// //         Remember me
+// //       </label>
+// //     </div>
+// //   </div>
+
+// //   <div className="d-grid">
+// //     <button type="submit" className="btn btn-primary">
+// //       Submit
+// //     </button>
+// //   </div>
+// //   <p className="forgot-password text-right">
+// //     Forgot <a href="#">password?</a>
+// //   </p>
+// // </form>
+
+// <>
+// <section className=" text-center text-lg-start">
+//   {/* <style>
+//     .rounded-t-5 {
+//       border-top-left-radius: 0.5rem;
+//       border-top-right-radius: 0.5rem;
+//     }
+
+//     .media (min-width: 992px) {
+//       .rounded-tr-lg-0 {
+//         border-top-right-radius: 0;
+//       }
+
+//       .rounded-bl-lg-5 {
+//         border-bottom-left-radius: 0.5rem;
+//       }
+//     }
+//   </style> */}
+//   <div className="card mb-3">
+//     <div className="row g-0 d-flex align-items-center">
+//       {/* <div className="col-lg-4 d-none d-lg-flex">
+//         <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" alt="Trendy Pants and Shoes"
+//           className="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+//       </div> */}
+//       <div className="col-lg-8">
+//         <div className="card-body py-5 px-md-5">
+
+//           <form method="post">
+//             <div className="form-outline mb-4">
+//               <label className="form-label" htmlFor="form2Example1">Enter Username </label>
+//               <input type="text" id="form2Example1" name="userName" className="form-control" />
 //             </div>
 
-//             <div class="form-outline mb-4">
-//               <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-//               <label class="form-label" for="typePasswordX-2">Password</label>
+//             <div className="form-outline mb-4">
+//              <label className="form-label" htmlFor="form2Example2">Enter Password </label>
+//              <input type="password" id="form2Example2" name="password" className="form-control" />
 //             </div>
 
-//             {/* <!-- Checkbox --> */}
-//             <div class="form-check d-flex justify-content-start mb-4">
-//               <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-//               <label class="form-check-label" for="form1Example3"> Remember password </label>
-//             </div>
+     
 
-//             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+//             <button type="submit" className="btn btn-primary btn-block mb-4">Sign in</button>
 
-//             {/* <hr class="my-4"> */}
+//           </form>
 
-//             <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-//               type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-//             <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-//               type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
-
-//           </div>
 //         </div>
 //       </div>
 //     </div>
 //   </div>
 // </section>
-//      </>
-  )
-}
+// </>
+  
+//   )
+// }
+
+//==========
+// import React, { useState } from 'react';
+
+// const Login = () => {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+
+//   const handleEmailChange = (event) => {
+//     setEmail(event.target.value);
+//   };
+
+//   const handlePasswordChange = (event) => {
+//     setPassword(event.target.value);
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+
+//     // Simulate login process here
+//     // ...
+
+//     // Clear input fields
+//     setEmail('');
+//     setPassword('');
+//   };
+
+//   return (
+// <fieldset>
+// <div className="container">
+//       <form onSubmit={handleSubmit}>
+//         <div className="form-group">
+//           <label htmlFor="email"><b>Email:</b><input type="email" className="form-control" id="email" value={email} onChange={handleEmailChange} />
+// </label>
+//         </div>
+//         <div className="form-group">
+//           <label htmlFor="password"><b>Password: </b><input type="password" className="form-control" id="password" value={password} onChange={handlePasswordChange} />
+// </label>
+//         </div><br/>
+//         <button type="submit" className="btn btn-primary">Login</button>
+//       </form>
+//     </div>
+// </fieldset>
+
+   
+//   );
+// };
+
+// export default Login;
+
+import React, { useState } from 'react';
+import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Simulate login process here
+    // ...
+
+    // Clear input fields
+    setEmail('');
+    setPassword('');
+  };
+
+  return (
+    <Container className="d-flex justify-content-center mt-5">
+      <div style={{ width: 300, border: "1px solid #ced4da", padding: 20, borderRadius: 5 }}>
+        <h3 className="mb-4">Login</h3>
+        <Form onSubmit={handleSubmit}>
+          <FormGroup>
+            <Label for="email">Email:</Label>
+            <Input type="email" id="email" value={email} onChange={handleEmailChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="password">Password:</Label>
+            <Input type="password" id="password" value={password} onChange={handlePasswordChange} />
+          </FormGroup>
+          <Button type="submit" color="primary">Login</Button>
+        </Form>
+      </div>
+    </Container>
+  );
+};
+
+export default LoginPage;

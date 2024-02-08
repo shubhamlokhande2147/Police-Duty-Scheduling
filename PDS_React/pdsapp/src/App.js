@@ -3,6 +3,7 @@ import HomeComponent from './pages/HomeComponent';
 import Header from './Components/Header';
 
 import './App.css';
+
 import LoginPage from './pages/LoginPage';
 
 function App() {
