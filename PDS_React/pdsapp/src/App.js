@@ -5,6 +5,7 @@ import './App.css';
 
 import LoginPage from './pages/LoginPage';
 import Footer from './Components/Footer';
+import AM_NavBar from './Components/AM_NavBar';
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
       </Routes>
       <Footer></Footer> */}
            <Header></Header>
+           <AM_NavBar></AM_NavBar>  
+
   <HomeComponent></HomeComponent>
-  <LoginPage></LoginPage>   
+  <LoginPage></LoginPage> 
   <LoginPage></LoginPage> 
 
    <Footer></Footer>
