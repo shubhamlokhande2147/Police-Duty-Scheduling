@@ -9,7 +9,7 @@ export default function Header() {
       <Container>
         <Navbar.Brand>
         <Image src="../images/Logo_Police.png" width="70" height="60" className="d-inline-block align-top" alt="Logo" />
-          <span className="ml-2 p-4">Police-Duty-Scheduling</span>
+          <span className="ml-2 p-4">Police-Duty-Scheduling</span> 
         </Navbar.Brand>
       </Container>
     </Navbar>

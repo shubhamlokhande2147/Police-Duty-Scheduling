@@ -22,8 +22,11 @@ function App() {
       <Footer></Footer> */}
            <Header></Header>
   <HomeComponent></HomeComponent>
-  <LoginPage></LoginPage>
-  <Footer></Footer>
+  <LoginPage></LoginPage>   
+  <LoginPage></LoginPage> 
+
+   <Footer></Footer>
+
   
     </div>
   );
