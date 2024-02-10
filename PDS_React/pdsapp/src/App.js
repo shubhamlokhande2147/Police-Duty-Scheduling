@@ -21,14 +21,11 @@ function App() {
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route>
       </Routes>
       <Footer></Footer> */}
-           <Header></Header>
-           <AM_NavBar></AM_NavBar>  
-
-  <HomeComponent></HomeComponent>
-  <LoginPage></LoginPage> 
-  <LoginPage></LoginPage> 
-
-   <Footer></Footer>
+           {/* <Header></Header>
+           <AM_NavBar></AM_NavBar>   */}
+           <HomeComponent></HomeComponent>
+           {/* <LoginPage></LoginPage> 
+           <Footer></Footer> */}
 
   
     </div>
