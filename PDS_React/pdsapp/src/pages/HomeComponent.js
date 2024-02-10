@@ -7,40 +7,42 @@ import '../Components/HomeComponent.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Header from '../Components/Header';
 
 export default function HomeComponent() {
   return (
    <>
-     <div>
-     It is Home Component
-   </div>
-   <div className="App">
-      <header>
-        <h1>Welcome to Our Landing Page</h1>
-      </header>
-      {/* <BigImage /> */}
-      <section className="cards">
-        <Card 
-          title="Card 1" 
-          description="Description of card 1." 
-          image="https://via.placeholder.com/15"
-        />
-        <Card 
-          title="Card 2" 
-          description="Description of card 2." 
-          image="https://via.placeholder.com/150"
-        />
-        <Card 
-          title="Card 3" 
-          description="Description of card 3." 
-          image="https://via.placeholder.com/150"
-        />
-      </section>
-      <footer>
-        <p>&copy; 2024 Your Company</p>
-      </footer>
-    </div>
-   
+
+   <div className="landing-page">
+        <main>
+        <section className="info">
+            <h2>Learn More About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, nisl vel rhoncus ullamcorper, nibh odio bibendum nibh, nec volutpat nibh nibh vel nibh.</p>
+          </section>
+         
+          <div className='row'>
+          <section className="cards col">
+            <div className="card">
+              <img src="https://via.placeholder.com/350x200.png?text=Card+1" alt="Card 1" />
+              <h3>Card 1 Title</h3>
+              <p>Card 1 Description</p>
+            </div>
+            <div className="card col">
+              <img src="https://via.placeholder.com/350x200.png?text=Card+2" alt="Card 2" />
+              <h3>Card 2 Title</h3>
+              <p>Card 2 Description</p>
+            </div>
+            <div className="card col">
+              <img src="https://via.placeholder.com/350x200.png?text=Card+3" alt="Card 3" />
+              <h3>Card 3 Title</h3>
+              <p>Card 3 Description</p>
+            </div>
+          </section>
+          </div>
+      
+        </main>
+     
+      </div>
    </>
  
 
