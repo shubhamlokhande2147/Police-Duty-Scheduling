@@ -19,7 +19,7 @@ namespace IOCWeb.Contexts
                             base.OnModelCreating(modelBuilder);
                             modelBuilder.Entity<Attendance_Master>(entity => 
                             {
-                            entity.HasKey(e => e.AM_IdId);
+                            entity.HasKey(e => e.AM_Id);
                             entity.Property(e => e.Belt_No).IsRequired();
                             entity.Property(e => e.Name).IsRequired();
                             entity.Property(e => e.Email_Id).IsRequired();

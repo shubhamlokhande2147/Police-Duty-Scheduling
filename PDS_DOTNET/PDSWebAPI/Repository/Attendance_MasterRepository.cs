@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using IOCWeb.Models;
+using IOCWeb.Managers;
 
 namespace IOCWeb.Repositories
 {

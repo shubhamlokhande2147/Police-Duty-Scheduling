@@ -11,7 +11,7 @@ namespace IOCWeb.Managers
         {
               public bool Delete(int id)
                 {
-                    using(var context = new CollectionContext())
+                    using(var context = new Attendance_MasterContext())
                     {
                         context.Attendance_Masters.Remove(context.Attendance_Masters.Find(id));
                         context.SaveChanges();
@@ -22,7 +22,7 @@ namespace IOCWeb.Managers
                 
                 public List<Attendance_Master> GetAll()
                 {
-                    using (var context = new CollectionContext())
+                    using (var context = new Attendance_MasterContext())
                     {
                     var products = from prod in context.Attendance_Masters select prod;
                     return products.ToList<Attendance_Master>();
@@ -31,7 +31,7 @@ namespace IOCWeb.Managers
 
                   public Attendance_Master GetById(int id)
                   {
-                        using (var context = new CollectionContext())
+                        using (var context = new Attendance_MasterContext())
                         {
                         var product = context.Attendance_Masters.Find(id);
                         return product;
@@ -40,7 +40,7 @@ namespace IOCWeb.Managers
 
                      public bool Insert(Attendance_Master product)
                      {
-                        using(var context = new CollectionContext())
+                        using(var context = new Attendance_MasterContext())
                         {
                             context.Attendance_Masters.Add(product);
                             context.SaveChanges(); 
@@ -51,9 +51,9 @@ namespace IOCWeb.Managers
                      
                        public bool Update(Attendance_Master product)
                         {
-                            using(var context = new CollectionContext())
+                            using(var context = new Attendance_MasterContext())
                             {
-                                var theProduct = context.Attendance_Masters.Find(product.AM_Idd);
+                                var theProduct = context.Attendance_Masters.Find(product.AM_Id);
                                 theProduct.Belt_No = product.Belt_No;
                                 theProduct.Name = product.Name;
                                 theProduct.Email_Id = product.Email_Id;
