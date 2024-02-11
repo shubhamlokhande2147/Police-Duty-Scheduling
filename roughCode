@@ -117,3 +117,11 @@ public class TestDuty {
         schedule.printSchedule();
     }
 }
+
+Title- Policce Duty Scheduling
+platform- J2EE
+duration- 1 month
+discription- For sheduling duty to policeman nowadays lots of problem facing like Duty repeatation to single policeman and not sheduled in sorted manner, as soon as duty sheduled
+Manual duty assigning system confusing and complicated and consumes lots of time to overcome this we are introducing solution  to 
+develop a web-based system that helps police department to maintain their daily duty scheduling records. System should work without affecting time,location and type of handset barriers. 
+Daily activities planning should be available globally to the authorized users. 
