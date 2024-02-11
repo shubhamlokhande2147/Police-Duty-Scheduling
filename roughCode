@@ -117,3 +117,8 @@ public class TestDuty {
         schedule.printSchedule();
     }
 }
+
+Title- Policce Duty Scheduling
+platform- J2EE
+duration- 1 month
+discription-
