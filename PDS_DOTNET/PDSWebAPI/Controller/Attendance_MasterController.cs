@@ -7,7 +7,7 @@ namespace IOCWeb.Controllers
 
 [ApiController]
 [Route("[controller]")]
-
+                                         //Controller
 public class Attendance_MasterController : ControllerBase
 {
      //Each action method is mapped to HTTP Request type
@@ -107,7 +107,11 @@ public class Attendance_MasterController : ControllerBase
                     }
         
                 }
+           
 
    }
+
+
+
 }   
 
