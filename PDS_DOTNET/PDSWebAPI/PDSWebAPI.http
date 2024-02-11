@@ -1,0 +1,6 @@
+@PDSWebAPI_HostAddress = http://localhost:5073
+
+GET {{PDSWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
