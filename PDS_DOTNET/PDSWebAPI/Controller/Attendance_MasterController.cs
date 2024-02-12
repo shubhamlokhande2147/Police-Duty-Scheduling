@@ -24,6 +24,7 @@ public class Attendance_MasterController : ControllerBase
         public IActionResult GetAttendance_Masters(){
             //invoke service method to resturn products
             // send received data as message to outside world
+            Console.WriteLine("hiii");
             try{
                     var message=_svc.GetAttendance_Masters();
                     if(message==null){
