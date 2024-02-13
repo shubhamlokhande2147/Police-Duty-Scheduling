@@ -46,11 +46,11 @@ Nowadays Police-Duty-Scheduling system is register based so we need a system whi
    - He maintained a historical record of schedules and they may use for auditing purpose.
       
  
- - Police Officers :
+ - Policemen :
    
-   - Police officers will login himself and view scheduled duty report.
-   - Police officers can change his own authentication credentials. 
-   - Police officers can apply for leave.
+   - Policemen will login himself and view scheduled duty report.
+   - Policemen officers can change his own authentication credentials. 
+   - Policemen officers can apply for leave.
 
 ## Non-Functional Requirement:
 
