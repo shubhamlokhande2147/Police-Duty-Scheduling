@@ -1,16 +1,16 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
 import AdminService from '../../service/AdminService';
 
-export default function ProductEdit() {
+export default function AM_Edit() {
   const location=useLocation(); 
-  const [formdetails,setformdetails] =useState({pid:"",pname:"",qty:"",price:""})
+  const [formdetails,setformdetails] =useState({am_id:"",belt_no:"",name:"",email_id:"",mobile:"",username:"",password:""})
   const navigate=useNavigate();
   useEffect(()=>{
     setformdetails({...location.state.pdata})
   },[])
   const updateproduct=()=>{
-    if(formdetails.pid==="" || formdetails.pname===""||formdetails.qty==="" || formdetails.price===""){
+    if(formdetails.am_id==="" || formdetails.belt_no===""||formdetails.name==="" || formdetails.email_id===""|| formdetails.mobile===""||formdetails.username==="" || formdetails.password===""){
        alert("pls fill all the fieds");
        return 
     }
@@ -18,8 +18,8 @@ export default function ProductEdit() {
     .then((result)=>{
       console.log(result.data);
       //clear the form
-      setformdetails({pid:"",pname:"",qty:"",price:""});
-      navigate("/table")
+      setformdetails({am_id:"",belt_no:"",name:"",email_id:"",mobile:"",username:"",password:""});
+      navigate("/")
     })
     .catch((err)=>{
       console.log("error occured",err);
@@ -29,37 +29,65 @@ export default function ProductEdit() {
     <div>
         <form>
   <div className="form-group">
-    <label htmlFor="pid">Product Id:</label>
-    <input type="text" className="form-control" id="pid" name="pid"
-      value={formdetails.pid}
-      onChange={(event)=>{setformdetails({...formdetails,pid:event.target.value})}}
+    <label htmlFor="am_id">AM Id:</label>
+    <input type="text" className="form-control" id="am_id" name="am_id"
+      value={formdetails.am_id}
+      onChange={(event)=>{setformdetails({...formdetails,am_id:event.target.value})}}
+      readOnly
+    />
+    
+  </div>
+
+  <div className="form-group">
+    <label htmlFor="belt_no">Belt No.:</label>
+    <input type="text" className="form-control" id="belt_no" name="belt_no"
+      value={formdetails.belt_no}
+      onChange={(event)=>{setformdetails({...formdetails,belt_no:event.target.value})}}
       readOnly
     />
     
   </div>
   <div className="form-group">
-    <label htmlFor="pname">Product Name</label>
-    <input type="text" className="form-control" id="pname" name="pname"
-      value={formdetails.pname}
-      onChange={(event)=>{setformdetails({...formdetails,pname:event.target.value})}}
+    <label htmlFor="name">Name</label>
+    <input type="text" className="form-control" id="name" name="name"
+      value={formdetails.name}
+      onChange={(event)=>{setformdetails({...formdetails,name:event.target.value})}}
     />
   </div>
+
   <div className="form-group">
-    <label htmlFor="qty">Product Quantity</label>
-    <input type="text" className="form-control" id="qty" name="qty"
-      value={formdetails.qty}
-      onChange={(event)=>{setformdetails({...formdetails,qty:event.target.value})}}
+    <label htmlFor="email_id">Email Id</label>
+    <input type="text" className="form-control" id="email_id" name="email_id"
+      value={formdetails.email_id}
+      onChange={(event)=>{setformdetails({...formdetails,email_id:event.target.value})}}
     />
     
   </div>
   <div className="form-group">
-    <label htmlFor="price">Product Price</label>
-    <input type="text" className="form-control" id="price" name="price"
-      value={formdetails.price}
-      onChange={(event)=>{setformdetails({...formdetails,price:event.target.value})}}
+    <label htmlFor="mobile">Mobile</label>
+    <input type="text" className="form-control" id="mobile" name="mobile"
+      value={formdetails.mobile}
+      onChange={(event)=>{setformdetails({...formdetails,mobile:event.target.value})}}
     />
   </div>
-  <button type="button" className="btn btn-primary" onClick={updateproduct}>Update Product</button>
+
+  <div className="form-group">
+    <label htmlFor="username">Username</label>
+    <input type="text" className="form-control" id="username" name="username"
+      value={formdetails.username}
+      onChange={(event)=>{setformdetails({...formdetails,username:event.target.value})}}
+    />
+  </div>
+  <div className="form-group">
+    <label htmlFor="password">Mobile</label>
+    <input type="password" className="form-control" id="password" name="password"
+      value={formdetails.password}
+      onChange={(event)=>{setformdetails({...formdetails,password:event.target.value})}}
+    />
+  </div>
+  
+
+  <button type="button" className="btn btn-primary" onClick={updateproduct}>Update</button>
 </form>
     </div>
   )

@@ -6,8 +6,6 @@ class AdminService{
     getAllproducts(){
        return axios.get(baseUrl+"attendance_masters")
     }
-
-    
     getById(am_id){
         return axios.get(baseUrl+"attendance_masters/"+am_id)
     }

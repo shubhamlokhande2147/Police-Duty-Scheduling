@@ -34,7 +34,7 @@ export default function AM_Table() {
   return (
     <div>
     <br></br>
-    <Link to="/form">
+    <Link to="/addnew">
        <button type="button" name="btn" id="btn" className="btn btn-success"> Add new Attendance_Master</button>
     </Link>
         <table className="table table-striped">

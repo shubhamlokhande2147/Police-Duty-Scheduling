@@ -13,6 +13,7 @@ import Admin_Home from './pages/Admin/Admin_Home';
 import Police_Home from './pages/Policeman/Police_Home';
 import Am_Registration from './pages/Admin/AM_Registration';
 import AM_Table from './pages/Admin/AM_Table';
+import AM_Edit from './pages/Admin/AM_Edit';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
 {/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
 {/* <Route path="/table" element={<ProductTable></ProductTable>}></Route> */}
         <Route path="/" element={<AM_Table/>}></Route>
+        <Route path="/addnew" element={<Am_Registration/>}></Route>
+        <Route path="/edit/:id" element={<AM_Edit/>}></Route>
+
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
         <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route> */}

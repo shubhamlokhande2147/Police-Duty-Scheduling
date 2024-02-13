@@ -17,7 +17,7 @@ export default function Am_Registration() {
       console.log(result.data);
       //clear the form
       setformdetails({belt_no:"",name:"",email_id:"",mobile:"",username:"",password:""});
-      navigate("/table")
+      navigate("/")
     })
     .catch((err)=>{
       console.log("error occured",err);
