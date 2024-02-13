@@ -43,7 +43,7 @@ export default function Am_Registration() {
   </div>
   <div className="form-group">
     <label htmlFor="email_id">Email Id :</label>
-    <input type="text" className="form-control" id="email_id" name="email_id"
+    <input type="email" className="form-control" id="email_id" name="email_id"
       value={formdetails.email_id}
       onChange={(event)=>{setformdetails({...formdetails,email_id:event.target.value})}}
     />
