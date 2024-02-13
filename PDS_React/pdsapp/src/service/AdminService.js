@@ -6,18 +6,20 @@ class AdminService{
     getAllproducts(){
        return axios.get(baseUrl+"attendance_masters")
     }
-    getById(pid){
-        return axios.get(baseUrl+"attendance_masters/"+pid)
+
+    
+    getById(am_id){
+        return axios.get(baseUrl+"attendance_masters/"+am_id)
     }
     addProduct(prod){
-        return axios.post(baseUrl+"attendance_masters/"+prod.pid,prod)
+        return axios.post(baseUrl+"attendance_masters/"+prod.am_id,prod)
     }
-    // updateProduct(prod){
-    //     return axios.put(baseUrl+"products/"+prod.pid,prod)
-    // }
-    // deleteProduct(pid){
-    //     return axios.delete(baseUrl+"products/"+pid);
-    // }
+    updateProduct(prod){
+        return axios.put(baseUrl+"attendance_masters/"+prod.am_id,prod)
+    }
+    deleteProduct(am_id){
+        return axios.delete(baseUrl+"attendance_masters/"+am_id);
+    }
 }
 
 export default new AdminService();

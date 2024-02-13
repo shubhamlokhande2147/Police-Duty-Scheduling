@@ -2,6 +2,8 @@ import HomeComponent from './pages/HomeComponent';
 import Header from './Components/Header';
 import { Routes,Route, useLocation} from 'react-router-dom';
 
+
+
 import './App.css';
 
 import LoginPage from './pages/LoginPage';
@@ -10,6 +12,7 @@ import A_Master from './pages/Attendance_Master/A_Master';
 import Admin_Home from './pages/Admin/Admin_Home';
 import Police_Home from './pages/Policeman/Police_Home';
 import Am_Registration from './pages/Admin/AM_Registration';
+import AM_Table from './pages/Admin/AM_Table';
 
 function App() {
 
@@ -33,7 +36,7 @@ function App() {
       <Routes>
 {/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
 {/* <Route path="/table" element={<ProductTable></ProductTable>}></Route> */}
-        <Route path="/" element={<Am_Registration/>}></Route>
+        <Route path="/" element={<AM_Table/>}></Route>
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
         <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route> */}
@@ -57,7 +60,6 @@ function App() {
 
 
            <Am_Registration></Am_Registration> */}
-
   
     </div>
   );
