@@ -1,13 +1,20 @@
 import HomeComponent from './pages/HomeComponent';
 import Header from './Components/Header';
+import { Routes,Route, useLocation} from 'react-router-dom';
 
 import './App.css';
 
 import LoginPage from './pages/LoginPage';
 import Footer from './Components/Footer';
-import AM_NavBar from './Components/AM_NavBar';
+import A_Master from './pages/Attendance_Master/A_Master';
+import Admin_Home from './pages/Admin/Admin_Home';
+import Police_Home from './pages/Policeman/Police_Home';
+import Am_Registration from './pages/Admin/AM_Registration';
 
 function App() {
+
+  const form = useLocation();
+
   return (
     <div className="App">
      {/* <Header></Header>
@@ -21,12 +28,35 @@ function App() {
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route>
       </Routes>
       <Footer></Footer> */}
+
+
+      <Routes>
+{/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
+{/* <Route path="/table" element={<ProductTable></ProductTable>}></Route> */}
+        <Route path="/" element={<Am_Registration/>}></Route>
+        {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
+        <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
+        <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route> */}
+      </Routes>
+    
+
+{/* 
            <Header></Header>
+
            <HomeComponent></HomeComponent>
-           <AM_NavBar></AM_NavBar>   
+           <Admin_Home></Admin_Home>
+
+        
+           <A_Master></A_Master> 
+
+
+             <Police_Home></Police_Home>
 
            <LoginPage></LoginPage> 
            <Footer></Footer> 
+
+
+           <Am_Registration></Am_Registration> */}
 
   
     </div>
