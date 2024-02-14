@@ -6,19 +6,18 @@ import { Navbar, Container, Image  } from 'react-bootstrap';
 
 
 
-export default function Admin_Home() {
+export default function AM_Home() {
   return (
     <div>
         <Navbar bg="dark" variant="dark" expand="lg">
        <Container className="px-lg-5 py-2" >
-         <Navbar.Brand href="#home">Admin</Navbar.Brand>
+         <Navbar.Brand href="#home">Attendance Master</Navbar.Brand>
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="me-auto">
-             <Nav.Link href="#home">ID</Nav.Link>
-             <Nav.Link href="#link">Name</Nav.Link>
-             <Nav.Link href="#link">Location</Nav.Link>
-             <Nav.Link href="#link">Shift_Time</Nav.Link>
+             <Nav.Link href="#home">Register Policeman</Nav.Link>
+             <Nav.Link href="addactivity">Add Activity</Nav.Link>
+             <Nav.Link href="#link">Schedule Duty</Nav.Link>
            </Nav>
          </Navbar.Collapse>
        </Container>

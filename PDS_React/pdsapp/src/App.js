@@ -8,15 +8,17 @@ import './App.css';
 
 import LoginPage from './pages/LoginPage';
 import Footer from './Components/Footer';
-import A_Master from './pages/Attendance_Master/A_Master';
+import A_Master from './pages/Attendance_Master/AM_Home';
 import Admin_Home from './pages/Admin/Admin_Home';
 import Police_Home from './pages/Policeman/Police_Home';
+
 import Am_Registration from './pages/Admin/AM_Registration';
 import AM_Table from './pages/Admin/AM_Table';
 import AM_Edit from './pages/Admin/AM_Edit';
-import Activity_Registration from './pages/Admin/Activity_Registration';
-import Activity_Table from './pages/Admin/Activity_Table';
-import Activity_Edit from './pages/Admin/Activity_Edit';
+
+import Activity_Registration from './pages/Attendance_Master/Activity_Registration';
+import Activity_Table from './pages/Attendance_Master/Activity_Table';
+import Activity_Edit from './pages/Attendance_Master/Activity_Edit';
 
 function App() {
 

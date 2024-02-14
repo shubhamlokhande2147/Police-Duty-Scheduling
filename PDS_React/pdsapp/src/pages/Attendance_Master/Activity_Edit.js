@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
 import AdminService from '../../service/AdminService';
 
-export default function AM_Edit() {
+export default function Activity_Edit() {
   const location=useLocation(); 
   const [formdetails,setformdetails] =useState({name:"",location:"",shift_time:""})
   const navigate=useNavigate();

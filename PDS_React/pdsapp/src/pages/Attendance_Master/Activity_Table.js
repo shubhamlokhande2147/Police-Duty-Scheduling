@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import AdminService from '../../service/AdminService';
 
 
-export default function Activity_Edit() {
+export default function Activity_Table() {
 
   const [plist,setplist]=useState([]);
   const fetchdata=()=>{
