@@ -16,7 +16,7 @@ import AM_Table from './pages/Admin/AM_Table';
 import AM_Edit from './pages/Admin/AM_Edit';
 import Activity_Registration from './pages/Admin/Activity_Registration';
 import Activity_Table from './pages/Admin/Activity_Table';
-import Activity_Edit from './pages/Admin/Activity_Table';
+import Activity_Edit from './pages/Admin/Activity_Edit';
 
 function App() {
 
@@ -46,7 +46,7 @@ function App() {
   
         <Route path="/addactivity" element={<Activity_Registration/>}></Route>
         <Route path="/activity_table" element={<Activity_Table/>}></Route>
-        <Route path="/edit_activity/:id" element={<Activity_Edit/>}></Route>
+        <Route path="/editactivity/:id" element={<Activity_Edit/>}></Route>
 
 
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
