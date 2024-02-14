@@ -15,7 +15,6 @@ export default function A_Master() {
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="me-auto">
-           addactivity
              <Nav.Link href="#home">Register Policeman</Nav.Link>
              <Nav.Link href="addactivity">Add Activity</Nav.Link>
              <Nav.Link href="#link">Schedule Duty</Nav.Link>

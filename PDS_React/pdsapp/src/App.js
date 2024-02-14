@@ -36,7 +36,7 @@ function App() {
       </Routes>
       <Footer></Footer> */}
 
-<A_Master></A_Master>
+{/* <A_Master></A_Master> */}
 
       <Routes>
 {/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
