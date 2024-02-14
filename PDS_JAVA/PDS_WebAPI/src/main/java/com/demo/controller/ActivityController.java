@@ -27,7 +27,7 @@ public class ActivityController {
 	private IActivityService aservice;
 	
 	
-	@GetMapping("/activities")
+	@GetMapping("/getallactivities")
 	public ResponseEntity<List<Activity>> getallactivities() {
 		return ResponseEntity.ok(aservice.getallactivities());
 	}
@@ -42,19 +42,19 @@ public class ActivityController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
-	@PostMapping("/activities/{ac_id}")
+	@PostMapping("/add_activity/{ac_id}")
 	public ResponseEntity<String> addactivity(@RequestBody Activity p) {
 		aservice.addnewactivity(p);
 		return ResponseEntity.ok("Data added successfully");
 	}
 
-	@PutMapping("/activities/{ac_id}")
+	@PutMapping("/update_activity/{ac_id}")
 	public ResponseEntity<String> updateactivity(@RequestBody Activity p) {
 		aservice.updateById(p);
 		return ResponseEntity.ok("Data modified successfully");
 	}
 
-	@DeleteMapping("/activities/{ac_id}")
+	@DeleteMapping("/delete_activity/{ac_id}")
 	public ResponseEntity<String> deleteactivity(@PathVariable int ac_id) {
 		aservice.deleteById(ac_id);
 		return ResponseEntity.ok("Data deleted successfully");

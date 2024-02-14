@@ -14,6 +14,9 @@ import Police_Home from './pages/Policeman/Police_Home';
 import Am_Registration from './pages/Admin/AM_Registration';
 import AM_Table from './pages/Admin/AM_Table';
 import AM_Edit from './pages/Admin/AM_Edit';
+import Activity_Registration from './pages/Admin/Activity_Registration';
+import Activity_Table from './pages/Admin/Activity_Table';
+import Activity_Edit from './pages/Admin/Activity_Table';
 
 function App() {
 
@@ -40,6 +43,11 @@ function App() {
         <Route path="/" element={<AM_Table/>}></Route>
         <Route path="/addnew" element={<Am_Registration/>}></Route>
         <Route path="/edit/:id" element={<AM_Edit/>}></Route>
+  
+        <Route path="/addactivity" element={<Activity_Registration/>}></Route>
+        <Route path="/activity_table" element={<Activity_Table/>}></Route>
+        <Route path="/edit_activity/:id" element={<Activity_Edit/>}></Route>
+
 
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
         <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
