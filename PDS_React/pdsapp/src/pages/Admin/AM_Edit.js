@@ -79,7 +79,7 @@ export default function AM_Edit() {
     />
   </div>
   <div className="form-group">
-    <label htmlFor="password">Mobile</label>
+    <label htmlFor="password">Password</label>
     <input type="password" className="form-control" id="password" name="password"
       value={formdetails.password}
       onChange={(event)=>{setformdetails({...formdetails,password:event.target.value})}}

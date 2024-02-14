@@ -34,8 +34,7 @@ export default function AM_Edit() {
       value={formdetails.ac_id}
       onChange={(event)=>{setformdetails({...formdetails,ac_id:event.target.value})}}
       readOnly
-    />
-    
+    /> 
   </div>
 
   <div className="form-group">
@@ -44,25 +43,18 @@ export default function AM_Edit() {
       value={formdetails.name}
       onChange={(event)=>{setformdetails({...formdetails,name:event.target.value})}}
       readOnly
-    />
-    
+    /> 
   </div>
-  <div className="form-group">
-    <label htmlFor="name">Name :</label>
-    <input type="text" className="form-control" id="name" name="name"
-      value={formdetails.name}
-      onChange={(event)=>{setformdetails({...formdetails,name:event.target.value})}}
-    />
-  </div>
+
 
   <div className="form-group">
     <label htmlFor="location">Location :</label>
     <input type="text" className="form-control" id="location" name="location"
       value={formdetails.location}
       onChange={(event)=>{setformdetails({...formdetails,location:event.target.value})}}
-    />
-    
+    />  
   </div>
+  
   <div className="form-group">
     <label htmlFor="shift_time">Shift Time :</label>
     <input type="text" className="form-control" id="shift_time" name="shift_time"

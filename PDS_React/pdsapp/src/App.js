@@ -36,6 +36,7 @@ function App() {
       </Routes>
       <Footer></Footer> */}
 
+<A_Master></A_Master>
 
       <Routes>
 {/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
@@ -44,16 +45,16 @@ function App() {
         <Route path="/addnew" element={<Am_Registration/>}></Route>
         <Route path="/edit/:id" element={<AM_Edit/>}></Route>
   
+
         <Route path="/addactivity" element={<Activity_Registration/>}></Route>
         <Route path="/activity_table" element={<Activity_Table/>}></Route>
-        <Route path="/editactivity/:id" element={<Activity_Edit/>}></Route>
+        <Route path="/edit_activity/:id" element={<Activity_Edit/>}></Route>
 
 
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
         <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route> */}
       </Routes>
-    
 
 {/* 
            <Header></Header>
