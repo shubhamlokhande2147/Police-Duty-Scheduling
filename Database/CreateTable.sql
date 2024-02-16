@@ -25,16 +25,19 @@ create table Activity (
 drop table if exists Police;
 create table Police (
         pid int PRIMARY KEY auto_increment,
+        ac_id int,
 		belt_no int, 
         name varchar(50),
         email_id varchar(25),
         desg varchar(50),
 		dept varchar(50),
 	    mobile varchar(12), 
-		Activity_Name varchar(50),
 	    username varchar(50),
-	    password varchar(50)
+	    password varchar(50),
+        roll_id int default 2,
+		FOREIGN KEY (ac_id) REFERENCES activity(ac_id)
      );
+
 	 
 drop table if exists P_Admin;
 create table P_Admin (
