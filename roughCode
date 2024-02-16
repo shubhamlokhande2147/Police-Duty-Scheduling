@@ -125,10 +125,10 @@ platform- J2EE
 duration- 1 month
 discription- 
 
-Frontend - HTML5, CSS3, bootstrap, Javascript, ReactJs
-Language- java 
-Framework-  Springboot, Hibernate
-Databse - Mysql
+Frontend - HTML5, CSS3, bootstrap, Javascript, ReactJs.
+Language- java language.
+Framework-  Springboot, Hibernate.
+Databse - Mysql.
 
 These days, there are many issues with assigning police duties to policemen, such as repeating duties to a single officer and not allocating duties in an organized way, even when they are scheduled. In order to solve the time-consuming and confusing manual duty assignment system, we developed a web-based system that aids police departments in keeping track of their daily duty schedule records. The system operates independently of time, place, or handset type barriers. Planning for daily activities is accessible to authorized users worldwide. 
 
