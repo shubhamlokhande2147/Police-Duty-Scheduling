@@ -46,7 +46,7 @@ public class Attendance_MasterServiceImpl implements IAttendance_MasterService {
 			
 			p.setBelt_no(am.getBelt_no());
 			p.setName(am.getName());
-			p.setEmail_id(am.getMobile());
+			p.setEmail_id(am.getEmail_id());
 			p.setMobile(am.getMobile());
 			p.setUsername(am.getUsername());
 			p.setPassword(am.getPassword());

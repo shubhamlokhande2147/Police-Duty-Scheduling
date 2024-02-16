@@ -1,8 +1,6 @@
 import axios from 'axios';
 let baseUrl="http://localhost:7373/attendance_master/"
 
-let baseUrl2="http://localhost:7373/activity/"
-
 
 
 class AdminService{
@@ -22,29 +20,6 @@ class AdminService{
     deleteProduct(am_id){
         return axios.delete(baseUrl+"attendance_masters/"+am_id);
     }
-
-     //-------------------------------------------------------------
-     //insert activity
-     addActivity(activity){
-        return axios.post(baseUrl2+"add_activity/"+activity.ac_id,activity)
-    }
-    //retrive activities
-     getAllactivities(){
-        return axios.get(baseUrl2+"getallactivities")
-     }
-     getActivityById(ac_id){
-         return axios.get(baseUrl2+"getallactivities/"+ac_id)
-     }
-     //update activity
-     updateActivity(activity){
-         return axios.put(baseUrl2+"update_activity/"+activity.ac_id,activity)
-     }
-     deleteActivity(ac_id){
-         return axios.delete(baseUrl2+"delete_activity/"+ac_id);
-     }
- 
-
-
 }
 
 

@@ -1,7 +1,7 @@
 import React, {useState}from 'react'
 import {useNavigate} from 'react-router-dom';
 
-import AdminService from '../../service/AdminService';
+import Am_Service from '../../service/Am_Service';
 
 
 export default function Activity_Registration() {
@@ -12,7 +12,7 @@ export default function Activity_Registration() {
        alert("pls fill all the fieds");
        return 
     }
-    AdminService.addActivity(formdetails)
+    Am_Service.addActivity(formdetails)
     .then((result)=>{
       console.log(result.data);
       //clear the form

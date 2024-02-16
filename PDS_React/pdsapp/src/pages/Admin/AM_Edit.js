@@ -19,7 +19,7 @@ export default function AM_Edit() {
       console.log(result.data);
       //clear the form
       setformdetails({am_id:"",belt_no:"",name:"",email_id:"",mobile:"",username:"",password:""});
-      navigate("/")
+      navigate("/am_table")
     })
     .catch((err)=>{
       console.log("error occured",err);

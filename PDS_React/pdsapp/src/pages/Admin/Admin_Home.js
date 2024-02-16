@@ -15,7 +15,7 @@ export default function Admin_Home() {
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="me-auto">
-             <Nav.Link href="#home">Register_Attendance_Master</Nav.Link>
+             <Nav.Link href="am_table">Attendance_Masters</Nav.Link>
              <Nav.Link href="#link">Leave</Nav.Link>
              <Nav.Link href="#link">Duties</Nav.Link>
              <Nav.Link href="#link">Emergency_Meet</Nav.Link>
@@ -23,6 +23,9 @@ export default function Admin_Home() {
          </Navbar.Collapse>
        </Container>
      </Navbar>
+
+     <div dangerouslySetInnerHTML={{__html: '<marquee><b style="background-color:blue;color:white">**Chaturshringi Police Station, Shivajinagar, Pune**</b></marquee>'}} />
+
     </div>
   )
 }

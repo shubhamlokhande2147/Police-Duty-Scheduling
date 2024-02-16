@@ -1,14 +1,14 @@
 import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
-import AdminService from '../../service/AdminService';
+import Am_Service from '../../service/Am_Service';
 
 
 export default function Activity_Table() {
 
   const [plist,setplist]=useState([]);
   const fetchdata=()=>{
-    AdminService.getAllactivities()
+    Am_Service.getAllactivities()
      .then((result)=>{
         console.log(result.data);
         setplist([...result.data])
@@ -22,7 +22,7 @@ export default function Activity_Table() {
 
   },[])
  const deleteActivity=(ac_id)=>{
-    AdminService.deleteActivity(ac_id)
+    Am_Service.deleteActivity(ac_id)
   .then((result)=>{
     console.log(result.data);
     fetchdata()

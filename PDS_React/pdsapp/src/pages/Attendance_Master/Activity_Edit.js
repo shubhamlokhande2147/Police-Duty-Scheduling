@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom';
-import AdminService from '../../service/AdminService';
+
+import Am_Service from '../../service/Am_Service';
 
 export default function Activity_Edit() {
   const location=useLocation(); 
@@ -14,7 +15,7 @@ export default function Activity_Edit() {
        alert("pls fill all the fieds");
        return 
     }
-    AdminService.updateActivity(formdetails)
+    Am_Service.updateActivity(formdetails)
     .then((result)=>{
       console.log(result.data);
       //clear the form
