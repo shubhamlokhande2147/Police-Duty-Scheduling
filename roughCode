@@ -131,7 +131,103 @@ Framework-  Springboot, Hibernate.
 Databse - Mysql.
 
 These days, there are many issues with assigning police duties to policemen, such as repeating duties to a single officer and not allocating duties in an organized way, even when they are scheduled. In order to solve the time-consuming and confusing manual duty assignment system, we developed a web-based system that aids police departments in keeping track of their daily duty schedule records. The system operates independently of time, place, or handset type barriers. Planning for daily activities is accessible to authorized users worldwide. 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) classs----
 
+package com.demo.Beans;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Policemen {
+    private String name;
+    private List<String> schedule;
+
+    public Policemen(String name) {
+        this.name = name;
+        this.schedule = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getSchedule() {
+        return schedule;
+    }
+
+    public void addActivity(String activity) {
+        schedule.add(activity);
+    }
+
+    public void takeLeave() {
+        schedule.clear();
+        schedule.add("On Leave");
+    }
+}
+
+
+
+2) class------
+
+package com.demo.Beans;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class policeScheduler {
+
+    private static final Policemen[] Policemen = null;
+
+	public static void main(String[] args) {
+        List<Policemen> policemen = new ArrayList<>();
+        policemen.add(new Policemen("Policeman1"));
+        policemen.add(new Policemen("Policeman2"));
+        policemen.add(new Policemen("Policeman3"));
+
+        // Schedule activities
+        scheduleActivities(policemen);
+
+        // Display initial sorted schedule
+        System.out.println("Initial Sorted Schedule:");
+        displaySortedSchedule(policemen);
+
+        // Policeman2 takes leave
+        Policemen policemanOnLeave = policemen.get(1);
+        leave(policemanOnLeave);
+
+        // Display updated sorted schedule after leave
+        System.out.println("Updated Sorted Schedule after Leave:");
+        displaySortedSchedule(policemen);
+    }
+
+    private static void scheduleActivities(List<Policemen> policemen) {
+        for (Policemen policeman : policemen) {
+            policeman.addActivity("Activity1");
+            policeman.addActivity("Activity2");
+            policeman.addActivity("Activity3");
+        }
+    }
+
+    private static void leave(Policemen policeman) {
+        System.out.println("Policeman " + policeman.getName() + " is on leave.");
+        policeman.takeLeave();
+    }
+
+    private static void displaySortedSchedule(List<Policemen> policemen) {
+        // Sort the policemen based on their schedules
+        Collections.sort(policemen, Comparator.comparing(p -> String.join(",", p.getSchedule())));
+
+        for (com.demo.Beans.Policemen policeman : policemen) {
+            System.out.println("Policeman " + policeman.getName() + " Schedule: " + policeman.getSchedule());
+        }
+        System.out.println();
+    }
+}
 
 
 
