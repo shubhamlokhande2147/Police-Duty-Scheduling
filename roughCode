@@ -228,7 +228,160 @@ public class policeScheduler {
         System.out.println();
     }
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Jdbc Scheduling------
 
+
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Policeman {
+    private String name;
+    private List<String> schedule;
+
+    public Policeman(String name) {
+        this.name = name;
+        this.schedule = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getSchedule() {
+        return schedule;
+    }
+
+    public void addActivity(String activity) {
+        schedule.add(activity);
+    }
+
+    public void takeLeave() {
+        schedule.clear();
+        schedule.add("On Leave");
+    }
+}
+
+public class PoliceSchedulerJDBC {
+
+    private static final String JDBC_URL = "jdbc:sqlite:schedule.db";
+
+    public static void main(String[] args) {
+        initializeDatabase();
+
+        List<Policeman> policemen = new ArrayList<>();
+        policemen.add(new Policeman("Policeman1"));
+        policemen.add(new Policeman("Policeman2"));
+        policemen.add(new Policeman("Policeman3"));
+
+        // Schedule activities
+        scheduleActivities(policemen);
+
+        // Display initial sorted schedule
+        System.out.println("Initial Sorted Schedule:");
+        displaySortedSchedule(policemen);
+
+        // Policeman2 takes leave
+        Policeman policemanOnLeave = policemen.get(1);
+        leave(policemanOnLeave);
+
+        // Display updated sorted schedule after leave
+        System.out.println("Updated Sorted Schedule after Leave:");
+        displaySortedSchedule(policemen);
+    }
+
+    private static void initializeDatabase() {
+        try (Connection connection = DriverManager.getConnection(JDBC_URL);
+             Statement statement = connection.createStatement()) {
+
+            // Create a table if not exists
+            String createTableSQL = "CREATE TABLE IF NOT EXISTS schedule (name TEXT, activity TEXT)";
+            statement.executeUpdate(createTableSQL);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void scheduleActivities(List<Policeman> policemen) {
+        try (Connection connection = DriverManager.getConnection(JDBC_URL);
+             Statement statement = connection.createStatement()) {
+
+            // Insert activities into the database
+            for (Policeman policeman : policemen) {
+                for (String activity : List.of("Activity1", "Activity2", "Activity3")) {
+                    statement.executeUpdate("INSERT INTO schedule (name, activity) VALUES ('" +
+                            policeman.getName() + "', '" + activity + "')");
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void leave(Policeman policeman) {
+        System.out.println("Policeman " + policeman.getName() + " is on leave.");
+        policeman.takeLeave();
+
+        // Update the database to mark the policeman on leave
+        try (Connection connection = DriverManager.getConnection(JDBC_URL);
+             Statement statement = connection.createStatement()) {
+
+            statement.executeUpdate("DELETE FROM schedule WHERE name = '" + policeman.getName() + "'");
+            statement.executeUpdate("INSERT INTO schedule (name, activity) VALUES ('" +
+                    policeman.getName() + "', 'On Leave')");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displaySortedSchedule(List<Policeman> policemen) {
+        // Retrieve schedule from the database and sort it
+        List<Policeman> updatedPolicemen = retrieveScheduleFromDatabase();
+
+        // Sort the policemen based on their schedules
+        Collections.sort(updatedPolicemen, Comparator.comparing(p -> String.join(",", p.getSchedule())));
+
+        for (Policeman policeman : updatedPolicemen) {
+            System.out.println("Policeman " + policeman.getName() + " Schedule: " + String.join(", ", policeman.getSchedule()));
+        }
+        System.out.println();
+    }
+
+    private static List<Policeman> retrieveScheduleFromDatabase() {
+        List<Policeman> policemen = new ArrayList<>();
+
+        try (Connection connection = DriverManager.getConnection(JDBC_URL);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM schedule")) {
+
+            Policeman currentPoliceman = null;
+
+            while (resultSet.next()) {
+                String name = resultSet.getString("name");
+                String activity = resultSet.getString("activity");
+
+                if (currentPoliceman == null || !currentPoliceman.getName().equals(name)) {
+                    currentPoliceman = new Policeman(name);
+                    policemen.add(currentPoliceman);
+                }
+
+                currentPoliceman.addActivity(activity);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return policemen;
+    }
+}
 
 
  
