@@ -62,4 +62,18 @@ public class ActivityController {
 	
 
 	
+//	@GetMapping("/getactivitiesname")
+//	public ResponseEntity<List<Activity>> getactivitynames() {
+//		
+//		List<Activity> policeList = aservice.getactivitynames();
+////		 for (Police police : policeList) {
+////			  Activity activityName = police.getActivity();
+////		         System.out.println(activityName);
+//
+//		// }
+//		
+//		return ResponseEntity.ok(pservice.getallpolice());
+//		
+//	}
+	
 }

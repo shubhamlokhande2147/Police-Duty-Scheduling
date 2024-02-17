@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.demo.model.Activity;
 import com.demo.model.Police;
 
 @Service
@@ -22,5 +23,6 @@ public interface IPoliceService {
 
 	List<Police> getByPrice(int lpr, int hpr);
 
-//	List<Police> findAll();
+
+	//List<Police> findAll();
 }

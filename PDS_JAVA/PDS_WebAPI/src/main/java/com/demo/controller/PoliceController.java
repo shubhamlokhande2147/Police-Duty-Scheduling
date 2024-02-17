@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.model.Activity;
 import com.demo.model.Police;
 import com.demo.service.IPoliceService;
 
@@ -31,6 +32,7 @@ public class PoliceController {
 	@GetMapping("/getallpolices")
 	public ResponseEntity<List<Police>> getallpolices() {
 		return ResponseEntity.ok(pservice.getallpolice());
+		
 	}
 	
 	
@@ -43,8 +45,24 @@ public class PoliceController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
+	
+	
+
+	
+	
 	@PostMapping("/add_police/{pid}")
 	public ResponseEntity<String> addpolice(@RequestBody Police p) {
+
+		 // List<Police> policeList = pservice.findAll();
+		  List<Police> policeList = pservice.getallpolice();
+
+         //Iterate through policeList and access the name of the associated Activity
+        for (Police police : policeList) {
+		  Activity activityName = police.getActivity();
+         System.out.println(activityName);
+        }
+        
+        
 		pservice.addnewpolice(p);
 		return ResponseEntity.ok("Data added successfully");
 	}

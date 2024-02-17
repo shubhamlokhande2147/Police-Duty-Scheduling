@@ -19,6 +19,8 @@ public interface IActivityService {
 	void deleteById(int id);
 
 	List<Activity> getByPrice(int lpr, int hpr);
+
+//	List<Activity> getactivitynames();
 	
 }
 

@@ -20,6 +20,8 @@ import Activity_Registration from './pages/Attendance_Master/Activity_Registrati
 import Activity_Table from './pages/Attendance_Master/Activity_Table';
 import Activity_Edit from './pages/Attendance_Master/Activity_Edit';
 import Police_Registration from './pages/Attendance_Master/Police_Registration';
+import Police_Table from './pages/Attendance_Master/Police_Table';
+import Police_Edit from './pages/Attendance_Master/Police_Edit';
 
 function App() {
 
@@ -42,6 +44,8 @@ function App() {
  <A_Master></A_Master> 
    <Admin_Home></Admin_Home>   
 
+   
+
       <Routes>
 {/* <Route path="/home" element={<HomeComponent></HomeComponent>}></Route> */}
 {/* <Route path="/table" element={<ProductTable></ProductTable>}></Route> */}
@@ -55,12 +59,19 @@ function App() {
         <Route path="/edit_activity/:id" element={<Activity_Edit/>}></Route>
 
 
+        <Route path="/addpolice" element={<Police_Registration/>}></Route>
+        <Route path="/police_table" element={<Police_Table/>}></Route>
+        <Route path="/edit_police/:id" element={<Police_Edit/>}></Route>
+
+
+    
+
         {/* <Route path="/list" element={<ProductList></ProductList>}></Route>
         <Route path="/edit/:id" element={<ProductEdit></ProductEdit>}></Route>
         <Route path="/view/:id" element={<ProductDetails></ProductDetails>}></Route> */}
       </Routes>
 
-  <Police_Registration></Police_Registration>
+  
 
 {/* 
            <Header></Header>

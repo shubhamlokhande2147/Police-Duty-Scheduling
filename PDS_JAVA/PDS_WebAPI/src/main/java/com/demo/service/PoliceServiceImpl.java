@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.dao.IPoliceDao;
+import com.demo.model.Activity;
 import com.demo.model.Police;
 
 @Service
@@ -60,6 +61,7 @@ public class PoliceServiceImpl implements IPoliceService{
 		pdao.deleteById(id);
 		
 	}
+
 
 	@Override
 	public List<Police> getByPrice(int lpr, int hpr) {

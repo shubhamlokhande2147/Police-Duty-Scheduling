@@ -25,7 +25,7 @@ class Adm_Service{
     }
     //delete police
     deletepolice(pid){
-        return axios.delete(baseUrl+"delete_activity/"+pid);
+        return axios.delete(baseUrl+"delete_police/"+pid);
     }
 
 

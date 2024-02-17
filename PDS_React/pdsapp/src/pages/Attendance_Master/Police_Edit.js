@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Adm_Service from '../../service/Am_Service';
 import Am_Service from '../../service/Am_Service';
 
-export default function Police_Registration() {
+export default function Police_Edit() {
 
   const [data,setData] = useState()
   // let activity ={

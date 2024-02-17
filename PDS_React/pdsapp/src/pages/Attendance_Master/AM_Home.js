@@ -15,7 +15,7 @@ export default function AM_Home() {
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="me-auto">
-             <Nav.Link href="#home">Register Policeman</Nav.Link>
+             <Nav.Link href="police_table">Register Policeman</Nav.Link>
              <Nav.Link href="activity_table">Activity</Nav.Link>
              <Nav.Link href="#link">Schedule Duty</Nav.Link>
            </Nav>
