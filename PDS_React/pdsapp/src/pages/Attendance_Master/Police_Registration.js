@@ -93,7 +93,6 @@ export default function Police_Registration() {
   >
     <option value="">Select Option</option>
     <option value="IPS">IPS</option>
-    <option value="IAS">IAS</option>
     <option value="AM">AM</option>
     <option value="POLICE">POLICE</option>
   </select>
@@ -150,8 +149,8 @@ export default function Police_Registration() {
     onChange={(event) => { setformdetails({ ...formdetails, duty: event.target.value }) }}
  >
   <option value="">Select Option</option>
-    <option value="fixed">Fixed</option>
-    <option value="unfixed">Unfixed</option>
+    <option value="Fixed">Fixed</option>
+    <option value="Unfixed">Unfixed</option>
   </select>
 </div>
 

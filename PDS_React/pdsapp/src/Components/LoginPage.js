@@ -3,8 +3,8 @@
 
 // export default function LoginPage() {
 //   return (
-//   //  <> <div>Login</div><input type="email"/><br></br>
-//   //    <input type="email"/></> 
+//   //  <> <div>Login</div><input type="username"/><br></br>
+//   //    <input type="username"/></> 
 
 // //   <form>
 // //   <h3>Sign In</h3>
@@ -12,9 +12,9 @@
 // //   <div className="mb-3">
 // //     <label>Email address</label>
 // //     <input
-// //       type="email"
+// //       type="username"
 // //       className="form-control"
-// //       placeholder="Enter email"
+// //       placeholder="Enter username"
 // //     />
 // //   </div>
 
@@ -79,7 +79,7 @@
 
 //           <form method="post">
 //             <div className="form-outline mb-4">
-//               <label className="form-label" htmlFor="form2Example1">Enter Username </label>
+//               <label className="form-label" htmlFor="form2Example1">Enter username </label>
 //               <input type="text" id="form2Example1" name="userName" className="form-control" />
 //             </div>
 
@@ -108,11 +108,11 @@
 // import React, { useState } from 'react';
 
 // const Login = () => {
-//   const [email, setEmail] = useState('');
+//   const [username, setUsername] = useState('');
 //   const [password, setPassword] = useState('');
 
-//   const handleEmailChange = (event) => {
-//     setEmail(event.target.value);
+//   const handleUsernameChange = (event) => {
+//     setUsername(event.target.value);
 //   };
 
 //   const handlePasswordChange = (event) => {
@@ -126,7 +126,7 @@
 //     // ...
 
 //     // Clear input fields
-//     setEmail('');
+//     setUsername('');
 //     setPassword('');
 //   };
 
@@ -135,7 +135,7 @@
 // <div className="container">
 //       <form onSubmit={handleSubmit}>
 //         <div className="form-group">
-//           <label htmlFor="email"><b>Email:</b><input type="email" className="form-control" id="email" value={email} onChange={handleEmailChange} />
+//           <label htmlFor="username"><b>Email:</b><input type="username" className="form-control" id="username" value={username} onChange={handleUsernameChange} />
 // </label>
 //         </div>
 //         <div className="form-group">
@@ -153,30 +153,128 @@
 
 // export default Login;
 
+//=====================================================================
+
+// import React, { useState } from 'react';
+// import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+
+// const LoginPage = () => {
+//   const [username, setUsername] = useState('');
+//   const [password, setPassword] = useState('');
+
+//   const handleUsernameChange = (event) => {
+//     setUsername(event.target.value);
+//   };
+
+//   const handlePasswordChange = (event) => {
+//     setPassword(event.target.value);
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+
+//     // Simulate login process here
+//     // ...
+
+//     // Clear input fields
+//     setUsername('');
+//     setPassword('');
+//   };
+
+//   return (
+//     <Container className="d-flex justify-content-center mt-5">
+//       <div style={{ width: 300, border: "1px solid #ced4da", padding: 20, borderRadius: 5 }}>
+//         <h3 className="mb-4">Login</h3>
+//         <Form onSubmit={handleSubmit}>
+//           <FormGroup>
+//             <Label for="username">Email:</Label>
+//             <Input type="username" id="username" value={username} onChange={handleUsernameChange} />
+//           </FormGroup>
+//           <FormGroup>
+//             <Label for="password">Password:</Label>
+//             <Input type="password" id="password" value={password} onChange={handlePasswordChange} />
+//           </FormGroup>
+//           <Button type="submit" color="primary">Login</Button>
+//         </Form>
+//       </div>
+//     </Container>
+//   );
+// };
+
+// export default LoginPage;
+
+//=========================================
+
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState('');
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleUserChange = (event) => {
+    console.log(event.target.value)
+    if("admin"){
+      // axios.post
+    }
+    else if("atendance_master"){
 
-    // Simulate login process here
-    // ...
+    }
+    else if("police"){
+
+    }
+    setUser(event.target.value);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+   
+const uname = document.getElementById("username");
+const pass = document.getElementById("password");
+const userdata = document.getElementById("user");
+console.log(uname);
+console.log(pass);
+console.log(userdata);
+
+
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password, user }),
+      });
+
+
+
+      if (response.ok) {
+        // Redirect or handle successful login
+        console.log('Login successful');
+      } else {
+        // Handle authentication failure
+        console.error('Login failed');
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
 
     // Clear input fields
-    setEmail('');
+    setUsername('');
     setPassword('');
+    setUser('');
+
   };
 
   return (
@@ -185,13 +283,31 @@ const LoginPage = () => {
         <h3 className="mb-4">Login</h3>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
-            <Label for="email">Email:</Label>
-            <Input type="email" id="email" value={email} onChange={handleEmailChange} />
+            <Label for="username">Username:</Label>
+            <Input type="username" id="username" value={username} onChange={handleUsernameChange} />
           </FormGroup>
           <FormGroup>
             <Label for="password">Password:</Label>
             <Input type="password" id="password" value={password} onChange={handlePasswordChange} />
           </FormGroup>
+
+          <FormGroup>
+            <Label for="user"> User:</Label>
+             <select
+              className="form-control"
+              id="user"
+              name="user"
+              value={user} onChange={handleUserChange}
+            >
+              <option value="">Select Option</option>
+              <option value="admin">Admin</option>
+              <option value="atendance_master">Atendance_Master</option>
+              <option value="police">Police</option>
+            </select>
+          </FormGroup>
+
+    
+
           <Button type="submit" color="primary">Login</Button>
         </Form>
       </div>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState}from 'react'
-import {useNavigate} from 'react-router-dom';
+import { useLocation,useNavigate} from 'react-router-dom';
 import Adm_Service from '../../service/Am_Service';
 import Am_Service from '../../service/Am_Service';
 
@@ -9,17 +9,22 @@ export default function Police_Edit() {
   // let activity ={
   //   ac_id:""
   // }
-  const[formdetails,setformdetails]=useState({belt_no:"",name:"",email_id:"",desg:"",dept:"",mobile:"",username:"",password:"",duty:"",activity :{ac_id:""}},)
-  
+  const[formdetails,setformdetails]=useState({pid:"",belt_no:"",name:"",email_id:"",desg:"",dept:"",mobile:"",username:"",password:"",duty:"",activity :{ac_id:""}},)
+  const location=useLocation(); 
+
   // const [id,setId] =useState();
+  //const navigate=useNavigate();
   const navigate=useNavigate();
-  const addPolice=()=>{
+  useEffect(()=>{
+    setformdetails({...location.state.pdata})
+  },[])
+  const updatePolice=()=>{
     console.log(formdetails)
-    if(formdetails.belt_no===""||formdetails.name===""||formdetails.email_id===""||formdetails.desg===""||formdetails.dept===""||formdetails.mobile===""||formdetails.username===""||formdetails.password===""||formdetails.duty===""){
+    if(formdetails.pid===""||formdetails.belt_no===""||formdetails.name===""||formdetails.email_id===""||formdetails.desg===""||formdetails.dept===""||formdetails.mobile===""||formdetails.username===""||formdetails.password===""||formdetails.duty===""){
        alert("pls fill all the fieds");
        return 
     }
-    Adm_Service.addPolice(formdetails)
+    Adm_Service.updatePolice(formdetails)
     .then((result)=>{
       console.log(result.data);
       console.log(formdetails.activity.ac_id)
@@ -46,17 +51,33 @@ export default function Police_Edit() {
 
 
   return (
+
+
+    
     <div>
       <div style={{ display: "flex", justifyContent: "center" }}>
       <form  style={{width:"70%"}}>
+
+  <div className="form-group">
+    <label htmlFor="pid">PID :</label>
+    <input type="text" className="form-control" id="pid" name="pid"
+      value={formdetails.pid}
+      onChange={(event)=>{setformdetails({...formdetails,pid:event.target.value})}}
+      readOnly
+    />
+    
+  </div>
+
   <div className="form-group">
     <label htmlFor="belt_no">Belt No. :</label>
     <input type="text" className="form-control" id="belt_no" name="belt_no"
       value={formdetails.belt_no}
       onChange={(event)=>{setformdetails({...formdetails,belt_no:event.target.value})}}
+      readOnly
     />
     
   </div>
+
   <div className="form-group">
     <label htmlFor="name">Name :</label>
     <input type="text" className="form-control" id="name" name="name"
@@ -64,6 +85,7 @@ export default function Police_Edit() {
       onChange={(event)=>{setformdetails({...formdetails,name:event.target.value})}}
     />
   </div>
+
   <div className="form-group">
     <label htmlFor="email_id">Email Id :</label>
     <input type="email" className="form-control" id="email_id" name="email_id"
@@ -150,8 +172,8 @@ export default function Police_Edit() {
     onChange={(event) => { setformdetails({ ...formdetails, duty: event.target.value }) }}
  >
   <option value="">Select Option</option>
-    <option value="fixed">Fixed</option>
-    <option value="unfixed">Unfixed</option>
+    <option value="Fixed">Fixed</option>
+    <option value="Unfixed">Unfixed</option>
   </select>
 </div>
 
@@ -186,7 +208,7 @@ export default function Police_Edit() {
 </div>
 
 
-  <button type="button" className="btn btn-primary" onClick={addPolice}>Register</button>
+  <button type="button" className="btn btn-primary" onClick={updatePolice}>Update</button>
 </form>
 </div>
 

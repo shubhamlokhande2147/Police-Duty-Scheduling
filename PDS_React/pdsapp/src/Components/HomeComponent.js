@@ -7,7 +7,7 @@ import '../Components/HomeComponent.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Header from '../Components/Header';
+import Header from './Header';
 
 export default function HomeComponent() {
   return (
@@ -16,8 +16,16 @@ export default function HomeComponent() {
    <div className="landing-page">
         <main>
         <section className="info">
-            <h2>Learn More About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, nisl vel rhoncus ullamcorper, nibh odio bibendum nibh, nec volutpat nibh nibh vel nibh.</p>
+            {/* <h2>Learn More About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, nisl vel rhoncus ullamcorper, nibh odio bibendum nibh, nec volutpat nibh nibh vel nibh.</p> */}
+                <p>
+                Our Police duty Scheduling web application provides a comprehensive solution for managing and organizing policemen schedules efficiently.
+                 Designing to meet the specific needs of law enforcement agencies, our application streamlines the process of scheduling duty shifts, ensuring optimal coverage and adherence to departmental requirements.
+                </p>
+                <p>
+                  With advance features tailored for law enforcement operations, our applications offer intuitive tools for assigning shifts, managing officers and staff availability, and generating detailed duty rosters. 
+                   By centralizing scheduling tasks and automating repetitive processes, our platform empowers police departments to optimize resource allocation and enhance operational effectiveness
+                </p>
           </section>
          
           <div className='row'>
