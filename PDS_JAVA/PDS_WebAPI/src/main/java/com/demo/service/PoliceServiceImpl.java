@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.demo.dao.IPoliceDao;
 import com.demo.model.Activity;
+import com.demo.model.CommonUser;
 import com.demo.model.Police;
 
 @Service
@@ -25,6 +26,8 @@ public class PoliceServiceImpl implements IPoliceService{
 	public void addnewpolice(Police p) {
 		pdao.save(p);	
 	}
+	
+
 
 	@Override
 	public Police getById(int pid) {

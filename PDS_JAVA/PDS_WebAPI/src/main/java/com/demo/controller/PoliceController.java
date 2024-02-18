@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Activity;
+import com.demo.model.CommonUser;
 import com.demo.model.Police;
+import com.demo.model.Role;
+
 import com.demo.service.IPoliceService;
 
 @RestController
@@ -47,9 +50,6 @@ public class PoliceController {
 
 	
 	
-
-	
-	
 	@PostMapping("/add_police/{pid}")
 	public ResponseEntity<String> addpolice(@RequestBody Police p) {
 
@@ -61,8 +61,7 @@ public class PoliceController {
 		  Activity activityName = police.getActivity();
          System.out.println(activityName);
         }
-        
-        
+                
 		pservice.addnewpolice(p);
 		return ResponseEntity.ok("Data added successfully");
 	}

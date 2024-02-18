@@ -6,8 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Police {
@@ -24,7 +29,6 @@ public class Police {
 	private String username;
 	private String password;
 	private String duty;
-	private int roll_id;
 	
 	@ManyToOne
     @JoinColumn(name = "ac_id")
@@ -37,7 +41,7 @@ public class Police {
 
 
 	public Police(int pid, int ac_id, int belt_no, String name, String email_id, String desg, String dept,
-			String mobile, String username, String password, String duty, int roll_id, Activity activity) {
+			String mobile, String username, String password, String duty, Activity activity) {
 		super();
 		this.pid = pid;
 		//this.ac_id = ac_id;
@@ -50,7 +54,6 @@ public class Police {
 		this.username = username;
 		this.password = password;
 		this.duty = duty;
-		this.roll_id = roll_id;
 		this.activity = activity;
 	}
 
@@ -165,14 +168,7 @@ public class Police {
 	}
 
 
-	public int getRoll_id() {
-		return roll_id;
-	}
 
-
-	public void setRoll_id(int roll_id) {
-		this.roll_id = roll_id;
-	}
 
 
 	public Activity getActivity() {
@@ -189,7 +185,7 @@ public class Police {
 	public String toString() {
 		return "Police [pid=" + pid + ", belt_no=" + belt_no + ", name=" + name + ", email_id="
 				+ email_id + ", desg=" + desg + ", dept=" + dept + ", mobile=" + mobile + ", username=" + username
-				+ ", password=" + password + ", duty=" + duty + ", roll_id=" + roll_id + ", activity=" + activity + "]";
+				+ ", password=" + password + ", duty=" + duty + ", activity=" + activity + "]";
 	}
 	
 	
