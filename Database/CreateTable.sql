@@ -15,7 +15,7 @@ create table Attendance_Master (
 
 drop table if exists Activity;
 create table Activity (
-     AC_id int PRIMARY KEY auto_increment,
+        AC_id int PRIMARY KEY auto_increment,
 	 name varchar(50),
 	 location varchar(50),
 	 shift_time varchar(50) 
@@ -30,14 +30,29 @@ create table Police (
         name varchar(50),
         email_id varchar(25),
         desg varchar(50),
-		dept varchar(50),
-	    mobile varchar(12), 
-	    username varchar(50),
-	    password varchar(50),
+	dept varchar(50),
+        mobile varchar(12), 
+        username varchar(50),
+        password varchar(50),
         roll_id int default 2,
-		FOREIGN KEY (ac_id) REFERENCES activity(ac_id)
+        FOREIGN KEY (ac_id) REFERENCES activity(ac_id)
      );
 
+drop table if exists roll;
+create table roll (
+        roll_id int PRIMARY KEY auto_increment,
+        roll_type varchar(50)
+	);
+
+drop table if exists login;
+create table login (
+        log_id int PRIMARY KEY auto_increment,
+        roll_type varchar(50),
+	username varchar(50),
+        password varchar(50),
+        roll_id int,
+		FOREIGN KEY (roll_id) REFERENCES roll(roll_id)
+	);
 	 
 drop table if exists P_Admin;
 create table P_Admin (
@@ -45,7 +60,9 @@ create table P_Admin (
 	    username varchar(50) DEFAULT "Admin",
 	    password varchar(50) DEFAULT "Admin"	 
 	 );
-	 
+
+
+
 drop table if exists Duty_History;
 CREATE TABLE Duty_History(
   dh_id int NOT NULL PRIMARY KEY,
@@ -55,7 +72,8 @@ CREATE TABLE Duty_History(
    FOREIGN KEY(police_id) REFERENCES police(pid),
    FOREIGN KEY(activity_id) REFERENCES Activity(Ac_id)
   );
-	 
+
+
 
 drop table if exists police_Leave;
 CREATE TABLE police_Leave(
