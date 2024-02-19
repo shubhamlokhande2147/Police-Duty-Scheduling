@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.demo.model.Activity;
-import com.demo.model.CommonUser;
 import com.demo.model.Police;
 
 @Service

@@ -15,31 +15,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.model.Activity;
-import com.demo.model.Leave;
-import com.demo.model.Police;
-import com.demo.service.ILeaveService;
+import com.demo.model.Admin;
+import com.demo.service.IAdminService;
 
 @RestController
-@RequestMapping("/leave")
+@RequestMapping("/admin")
 @CrossOrigin(origins = "http://localhost:3000")
-public class LeaveController {
+public class AdminController {
 	
+
 	@Autowired
-	private ILeaveService lservice;
+	private IAdminService aservice;
 	
 
 
-	@GetMapping("/getalleaves")
-	public ResponseEntity<List<Leave>> getallleaves() {
-		return ResponseEntity.ok(lservice.getalleaves());
+	@GetMapping("/getalladmins")
+	public ResponseEntity<List<Admin>> getalladmins() {
+		return ResponseEntity.ok(aservice.getalladmin());
 		
 	}
 	
 	
-	@GetMapping("/leaves/{lvId}")
-	public ResponseEntity<Leave> getallleaves(@PathVariable int lvId) {
-		Leave p = lservice.getById(lvId);
+	@GetMapping("/admins/{ac_id}")
+	public ResponseEntity<Admin> getalladmins(@PathVariable int ad_id) {
+		Admin p = aservice.getById(ad_id);
 		if (p != null)
 			return ResponseEntity.ok(p);
 		else
@@ -48,34 +47,32 @@ public class LeaveController {
 
 	
 	
-	@PostMapping("/add_leave/{lvId}")
-	public ResponseEntity<String> addleave(@RequestBody Leave p) {
+	@PostMapping("/add_admin/{ad_id}")
+	public ResponseEntity<String> addpolice(@RequestBody Admin p) {
 
-		             // List<Police> policeList = pservice.findAll();
-//		  List<Police> policeList = pservice.getallpolice();
+//		 // List<Police> policeList = pservice.findAll();
+//		  List<Admin> policeList = aservice.getalladmin();
 //
-//                    //Iterate through policeList and access the name of the associated Activity
+//         //Iterate through policeList and access the name of the associated Activity
 //        for (Police police : policeList) {
 //		  Activity activityName = police.getActivity();
 //         System.out.println(activityName);
 //        }
 //                
-		lservice.addnewleave(p);
+        aservice.addnewadmin(p);
 		return ResponseEntity.ok("Data added successfully");
 	}
 
-	@PutMapping("/update_leavee/{lvId}")
-	public ResponseEntity<String> updateactivity(@RequestBody Leave p) {
-		lservice.updateById(p);
+	@PutMapping("/update_admin/{ad_id}")
+	public ResponseEntity<String> updateactivity(@RequestBody Admin p) {
+		aservice.updateById(p);
 		return ResponseEntity.ok("Data modified successfully");
 	}
 
-	@DeleteMapping("/delete_leave/{lvId}")
-	public ResponseEntity<String> deleteactivity(@PathVariable int lvId) {
-		lservice.deleteById(lvId);
+	@DeleteMapping("/delete_admin/{ad_id}")
+	public ResponseEntity<String> deleteactivity(@PathVariable int ad_id) {
+		aservice.deleteById(ad_id);
 		return ResponseEntity.ok("Data deleted successfully");
 	}
-	
-	
-	
+
 }

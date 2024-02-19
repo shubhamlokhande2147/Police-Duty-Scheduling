@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Activity;
-import com.demo.model.CommonUser;
 import com.demo.model.Police;
-import com.demo.model.Role;
 
 import com.demo.service.IPoliceService;
 
