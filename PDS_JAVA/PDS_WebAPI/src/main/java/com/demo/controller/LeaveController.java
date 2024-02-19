@@ -64,7 +64,7 @@ public class LeaveController {
 		return ResponseEntity.ok("Data added successfully");
 	}
 
-	@PutMapping("/update_leavee/{lvId}")
+	@PutMapping("/update_leave/{lvId}")
 	public ResponseEntity<String> updateactivity(@RequestBody Leave p) {
 		lservice.updateById(p);
 		return ResponseEntity.ok("Data modified successfully");
