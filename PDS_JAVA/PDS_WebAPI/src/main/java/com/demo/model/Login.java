@@ -18,21 +18,18 @@ public class Login {
 	private int log_id;
     private String username;
 	private String password;
+    private int role_id;
 	
-	@ManyToOne
-	@JoinColumn(name="roleid")
-    Role roleid;
-
-	public Login() {
+    public Login() {
 		super();
 	}
 
-	public Login(int log_id, String username, String password, Role roleid) {
+	public Login(int log_id, String username, String password, int role_id) {
 		super();
 		this.log_id = log_id;
 		this.username = username;
 		this.password = password;
-		this.roleid = roleid;
+		this.role_id = role_id;
 	}
 
 	public int getLog_id() {
@@ -59,12 +56,25 @@ public class Login {
 		this.password = password;
 	}
 
-	public Role getRoleid() {
-		return roleid;
+	public int getRole_id() {
+		return role_id;
 	}
 
-	public void setRoleid(Role roleid) {
-		this.roleid = roleid;
+	public void setRole_id(int role_id) {
+		this.role_id = role_id;
 	}
+
+	@Override
+	public String toString() {
+		return "Login [log_id=" + log_id + ", username=" + username + ", password=" + password + ", role_id=" + role_id
+				+ "]";
+	}
+    
+    
+    
+    
+
+
+	
 	
 }

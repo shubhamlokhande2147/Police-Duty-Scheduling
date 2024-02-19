@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Login;
-import com.demo.model.Role;
 import com.demo.service.ILoginService;
 
 
@@ -20,15 +19,6 @@ public class LoginController {
 	@Autowired
 	private ILoginService lservice;
 	
-	@PostMapping("/login")
-    public int login(@RequestBody Login user) {
-		Login authenticatedUser = lservice.checkUser(user.getUsername(), user.getPassword());
-		
-        if (authenticatedUser == null) {
-            return -1;
-        }
-         Role roll = authenticatedUser.getRoleid();
-         return roll.getRoleid();
-    }
+	
 	
 }
