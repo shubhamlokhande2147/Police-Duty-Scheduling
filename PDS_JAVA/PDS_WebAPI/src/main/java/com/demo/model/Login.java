@@ -24,6 +24,12 @@ public class Login {
 		super();
 	}
 
+	public Login(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+	
 	public Login(int log_id, String username, String password, int role_id) {
 		super();
 		this.log_id = log_id;

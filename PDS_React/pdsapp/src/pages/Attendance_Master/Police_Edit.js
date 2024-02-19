@@ -208,7 +208,7 @@ export default function Police_Edit() {
 </div>
 
 
-  <button type="button" className="btn btn-primary" onClick={updatePolice}>Update</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={updatePolice}>Update</button>
 </form>
 </div>
 

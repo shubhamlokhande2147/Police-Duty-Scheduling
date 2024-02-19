@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.demo.model.Admin;
+import com.demo.model.Login;
 
 @Service
 public interface IAdminService {
@@ -21,6 +22,8 @@ public interface IAdminService {
 	void deleteById(int id);
 
 	List<Admin> getByPrice(int lpr, int hpr);
+	
+	String loginAdmin(Login login);
 
 	
 }

@@ -13,10 +13,6 @@ import Admin_Home from './pages/Admin/Admin_Home';
 import AM_Home from './pages/Attendance_Master/AM_Home';
 import Police_Home from './pages/Policeman/Police_Home';
 
-
-// import AM_Home from './pages/Attendance_Master/AM_Home';
-// import Police_Home from '/pages/Policeman/Police_Home';
-
 import Am_Registration from './pages/Admin/AM_Registration';
 import AM_Table from './pages/Admin/AM_Table';
 import AM_Edit from './pages/Admin/AM_Edit';
@@ -28,6 +24,7 @@ import Activity_Edit from './pages/Attendance_Master/Activity_Edit';
 import Police_Registration from './pages/Attendance_Master/Police_Registration';
 import Police_Table from './pages/Attendance_Master/Police_Table';
 import Police_Edit from './pages/Attendance_Master/Police_Edit';
+import Police_Leave from './pages/Policeman/Police_Leave';
 
 function App() {
 
@@ -43,9 +40,9 @@ function App() {
         <><HomeComponent></HomeComponent> <Footer></Footer></>}></Route> 
         <Route path="/login" element={<LoginPage/>}></Route>
 
-        <Route path="/admin" element={<Admin_Home/>}/>
-        <Route path="/am_master" element={<AM_Home/>}/>
-        <Route path="/police" element={<Police_Home/>}/>
+        <Route path="/admin_home" element={<Admin_Home/>}/>
+        <Route path="/am_master_home" element={<AM_Home/>}/>
+        <Route path="/police_home" element={<Police_Home/>}/>
 
 
         <Route path="/am_table" element={<AM_Table/>}></Route>
@@ -63,6 +60,9 @@ function App() {
         <Route path="/edit_police/:id" element={<Police_Edit/>}></Route>
 
       </Routes> 
+      
+
+      <Police_Leave></Police_Leave>
     </div>
   );
 }

@@ -185,7 +185,7 @@ export default function Police_Registration() {
 </div>
 
 
-  <button type="button" className="btn btn-primary" onClick={addPolice}>Register</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addPolice}>Register</button>
 </form>
 </div>
 

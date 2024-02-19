@@ -27,8 +27,8 @@ export default function Activity_Edit() {
     })
   }
   return (
-    <div>
-        <form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+    <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="ac_id">AC Id :</label>
     <input type="text" className="form-control" id="ac_id" name="ac_id"
@@ -65,7 +65,7 @@ export default function Activity_Edit() {
   </div>
   
 
-  <button type="button" className="btn btn-primary" onClick={updateActivity}>Update</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={updateActivity}>Update</button>
 </form>
     </div>
   )

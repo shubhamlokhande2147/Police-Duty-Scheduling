@@ -26,8 +26,8 @@ export default function AM_Edit() {
     })
   }
   return (
-    <div>
-        <form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="am_id">AM Id:</label>
     <input type="text" className="form-control" id="am_id" name="am_id"
@@ -87,7 +87,7 @@ export default function AM_Edit() {
   </div>
   
 
-  <button type="button" className="btn btn-primary" onClick={updateproduct}>Update</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={updateproduct}>Update</button>
 </form>
     </div>
   )

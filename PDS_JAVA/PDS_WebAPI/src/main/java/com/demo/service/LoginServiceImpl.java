@@ -12,17 +12,17 @@ public class LoginServiceImpl implements ILoginService {
 	@Autowired
 	private ILoginDao ldao;
 	
-     	    @Override
-			public Login checkUser(String uname, String passwd) {
-					
-				Login user =  ldao.validateUser(uname, passwd);
-				System.out.println(user);
-				
-				if (user == null || !user.getPassword().equals(passwd)) {
-			        return null;
-			    }
-				else return user;
-			}
+//     	    @Override
+//			public Login checkUser(String uname, String passwd) {
+//					
+//				Login user =  ldao.validateUser(uname, passwd);
+//				System.out.println(user);
+//				
+//				if (user == null || !user.getPassword().equals(passwd)) {
+//			        return null;
+//			    }
+//				else return user;
+//			}
      	    
      		public Login savelog(Login login)
      		{

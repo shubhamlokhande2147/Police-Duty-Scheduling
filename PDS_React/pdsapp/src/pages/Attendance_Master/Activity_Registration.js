@@ -24,8 +24,8 @@ export default function Activity_Registration() {
     })
   }
   return (
-    <div>
-      <form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+    <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="name">Name :</label>
     <input type="text" className="form-control" id="name" name="name"
@@ -50,7 +50,7 @@ export default function Activity_Registration() {
     
   </div>
 
-  <button type="button" className="btn btn-primary" onClick={addActivity}>Register</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addActivity}>Register</button>
 </form>
     </div>
   )

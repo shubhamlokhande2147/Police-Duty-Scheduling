@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.demo.model.Activity;
+import com.demo.model.Login;
 import com.demo.model.Police;
 
 @Service
@@ -25,6 +26,7 @@ public interface IPoliceService {
 
 	List<Police> getByPrice(int lpr, int hpr);
 
+	String loginPolice(Login login);
 
 	//List<Police> findAll();
 }

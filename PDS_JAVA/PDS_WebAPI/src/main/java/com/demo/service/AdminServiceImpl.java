@@ -7,13 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.model.Admin;
+import com.demo.model.Login;
 import com.demo.dao.IAdminDao;
+import com.demo.dao.ILoginDao;
 
 @Service
 public class AdminServiceImpl implements IAdminService{
 
 	@Autowired
 	 private IAdminDao adao;
+	
+	@Autowired
+	 private ILoginDao ldao;
+		
 	
 	@Override
 	public List<Admin> getalladmin() {
@@ -49,6 +55,9 @@ public class AdminServiceImpl implements IAdminService{
 		}		
 	}
 
+	
+	
+	
 	@Override
 	public void deleteById(int id) {
 		// TODO Auto-generated method stub
@@ -59,6 +68,29 @@ public class AdminServiceImpl implements IAdminService{
 	public List<Admin> getByPrice(int lpr, int hpr) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public String loginAdmin(Login login) {
+       
+		Login ad = ldao.getadmin(login.getUsername());
+		
+		if(ad != null)
+		{
+			if(login.getPassword().equals(ad.getPassword()))
+			{
+					return "Login Success ";
+			}
+			else
+			{
+				return "Login Fail ";
+			}
+		}
+		else
+		{
+			return "Admin does not exist";
+		}
+
 	}
 
 }

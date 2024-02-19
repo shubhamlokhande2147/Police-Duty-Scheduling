@@ -7,7 +7,7 @@ import com.demo.model.Login;
 @Service
 public interface ILoginService {
 
-	public Login checkUser(String uname, String passwd);
+	//public Login checkUser(String uname, String passwd);
 
 
 }

@@ -24,8 +24,8 @@ export default function Am_Registration() {
     })
   }
   return (
-    <div>
-      <form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="belt_no">Belt No. :</label>
     <input type="text" className="form-control" id="belt_no" name="belt_no"
@@ -76,7 +76,7 @@ export default function Am_Registration() {
 
 
 
-  <button type="button" className="btn btn-primary" onClick={addproduct}>Register</button>
+  <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addproduct}>Register</button>
 </form>
     </div>
   )

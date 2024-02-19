@@ -35,7 +35,7 @@ export default function Activity_Table() {
     <div>
     <br></br>
     <Link to="/addactivity">
-       <button type="button" name="btn" id="btn" className="btn btn-success"> Add new Activity</button>
+       <button type="button" name="btn" id="btn" style={{ marginBottom: '3%' }} className="btn btn-success"> Add new Activity</button>
     </Link>
         <table className="table table-striped">
   <thead>

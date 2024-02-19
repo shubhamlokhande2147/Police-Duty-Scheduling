@@ -6,8 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.demo.dao.ILoginDao;
 import com.demo.dao.IPoliceDao;
 import com.demo.model.Activity;
+import com.demo.model.Login;
 import com.demo.model.Police;
 
 @Service
@@ -15,6 +17,9 @@ public class PoliceServiceImpl implements IPoliceService{
 	
 	@Autowired
 	 private IPoliceDao pdao;
+	
+	@Autowired
+	 private ILoginDao ldao;
 
 	@Override
 	public List<Police> getallpolice() {
@@ -69,6 +74,28 @@ public class PoliceServiceImpl implements IPoliceService{
 	public List<Police> getByPrice(int lpr, int hpr) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public String loginPolice(Login login) {
+		
+		Login ad = ldao.getpolice(login.getUsername());
+		
+		if(ad != null)
+		{
+			if(login.getPassword().equals(ad.getPassword()))
+			{
+					return "Login Success ";
+			}
+			else
+			{
+				return "Login Fail ";
+			}
+		}
+		else
+		{
+			return "Police does not exist";
+		}
 	}
 
 //	@Override

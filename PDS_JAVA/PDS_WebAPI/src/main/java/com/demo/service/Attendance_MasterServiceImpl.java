@@ -8,14 +8,20 @@ import org.springframework.stereotype.Service;
 
 import com.demo.dao.IActivityDao;
 import com.demo.dao.IAttendance_MasterDao;
+import com.demo.dao.ILoginDao;
 import com.demo.model.Activity;
 import com.demo.model.Attendance_Master;
+import com.demo.model.Login;
 
 @Service
 public class Attendance_MasterServiceImpl implements IAttendance_MasterService {
 
 	@Autowired
 	 private IAttendance_MasterDao adao;
+
+	@Autowired
+	 private ILoginDao ldao;
+		
 	
 	@Override
 	public List<Attendance_Master> getallattendance_masters() {
@@ -66,5 +72,29 @@ public class Attendance_MasterServiceImpl implements IAttendance_MasterService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public String loginam_master(Login login) {
+       
+		Login ad = ldao.getam_master(login.getUsername());
+		
+		if(ad != null)
+		{
+			if(login.getPassword().equals(ad.getPassword()))
+			{
+					return "Login Success ";
+			}
+			else
+			{
+				return "Login Fail ";
+			}
+		}
+		else
+		{
+			return "Am_Master does not exist";
+		}
+	}
+
+	
 
 }
