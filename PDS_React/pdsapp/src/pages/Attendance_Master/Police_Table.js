@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 
 
 import Adm_Service from '../../service/Am_Service';
+import Police_Home from '../Policeman/Police_Home';
+import AM_Home from './AM_Home';
 
 export default function Police_Table() {
 
@@ -34,9 +36,9 @@ export default function Police_Table() {
 
   return (
     <div>
-    <br></br>
+    <AM_Home></AM_Home>
     <Link to="/addpolice">
-       <button type="button" name="btn" id="btn" className="btn btn-success"> Add new Police</button>
+       <button type="button" name="btn" id="btn" style={{ marginBottom: '15px',marginTop: '15px',textAlign: 'center' }}   className="btn btn-success"> Add new Police</button>
     </Link>
 
         <table className="table table-striped">

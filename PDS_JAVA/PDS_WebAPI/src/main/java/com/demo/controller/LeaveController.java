@@ -50,16 +50,8 @@ public class LeaveController {
 	
 	@PostMapping("/add_leave/{lvId}")
 	public ResponseEntity<String> addleave(@RequestBody Leave p) {
-
-		             // List<Police> policeList = pservice.findAll();
-//		  List<Police> policeList = pservice.getallpolice();
-//
-//                    //Iterate through policeList and access the name of the associated Activity
-//        for (Police police : policeList) {
-//		  Activity activityName = police.getActivity();
-//         System.out.println(activityName);
-//        }
-//                
+System.out.println("data   "+ p);
+              
 		lservice.addnewleave(p);
 		return ResponseEntity.ok("Data added successfully");
 	}

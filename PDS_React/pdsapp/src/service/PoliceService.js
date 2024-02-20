@@ -15,8 +15,9 @@ class PoliceService{
     getById(lvId){
         return axios.get(baseUrl+"leaves/"+lvId)
     }
-    //insert police
+    //insert leave
     addLeave(prod){
+        console.log("service",prod)
         return axios.post(baseUrl+"add_leave/"+prod.lvId,prod)
     }
     //update police
@@ -25,6 +26,7 @@ class PoliceService{
     }
     //delete police
     deleteleave(lvId){
+        console.log(lvId)
         return axios.delete(baseUrl+"delete_leave/"+lvId);
     }
 

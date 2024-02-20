@@ -2,6 +2,7 @@ package com.demo.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.demo.model.Admin;
@@ -30,6 +31,8 @@ public interface ILoginDao extends JpaRepository<Login,Integer> {
 	@Query(value = "SELECT * FROM Login where username = ?1 ", nativeQuery = true)
     Login getpolice(String usernm);
 	
+	    @Query("SELECT p.pid FROM Police p WHERE p.username = :username AND p.password = :password")
+	    Integer findPidByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
 	
 	
 	

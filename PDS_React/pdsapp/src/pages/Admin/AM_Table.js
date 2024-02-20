@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
 import AdminService from '../../service/AdminService';
+import Admin_Home from './Admin_Home';
 
 
 export default function AM_Table() {
@@ -33,6 +34,7 @@ export default function AM_Table() {
 
   return (
     <div>
+      <Admin_Home></Admin_Home>
     <br></br>
     <Link to="/addnew">
        <button type="button" name="btn" id="btn" className="btn btn-success"> Add new Attendance_Master</button>

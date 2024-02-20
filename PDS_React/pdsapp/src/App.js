@@ -25,6 +25,7 @@ import Police_Registration from './pages/Attendance_Master/Police_Registration';
 import Police_Table from './pages/Attendance_Master/Police_Table';
 import Police_Edit from './pages/Attendance_Master/Police_Edit';
 import Police_Leave from './pages/Policeman/Police_Leave';
+import Leave_Table from './pages/Attendance_Master/Leave_Table';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
   return (
     <div className="App">
      
-      <Header></Header>
+      {/* <Header></Header> */}
 
       <Routes>  
         <Route path='/' element={
@@ -59,10 +60,13 @@ function App() {
         <Route path="/police_table" element={<Police_Table/>}></Route>
         <Route path="/edit_police/:id" element={<Police_Edit/>}></Route>
 
+        <Route path="/police_leave" element={<Police_Leave/>}></Route>
+        <Route path="/leave_table" element={<Leave_Table/>}></Route>
+
+
       </Routes> 
       
 
-      <Police_Leave></Police_Leave>
     </div>
   );
 }

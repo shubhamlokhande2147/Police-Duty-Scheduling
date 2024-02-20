@@ -12,7 +12,7 @@ import Header from './Header';
 export default function HomeComponent() {
   return (
    <>
-
+<Header></Header>
    <div className="landing-page">
         <main>
         <section className="info">

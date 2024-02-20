@@ -16,7 +16,6 @@ export default function Admin_Home() {
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="me-auto">
              <Nav.Link href="am_table">Attendance_Masters</Nav.Link>
-             <Nav.Link href="#link">Leave</Nav.Link>
              <Nav.Link href="#link">Duties</Nav.Link>
              <Nav.Link href="#link">Emergency_Meet</Nav.Link>
            </Nav>
