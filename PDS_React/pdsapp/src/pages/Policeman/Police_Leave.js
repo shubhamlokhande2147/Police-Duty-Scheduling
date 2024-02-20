@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import PoliceService from '../../service/PoliceService';
+import Police_Home from './Police_Home';
 
 export default function Police_Leave() {
   const [formdetails, setFormDetails] = useState({ fromDate: "", toDate: "", reason: "" });
@@ -40,6 +41,9 @@ export default function Police_Leave() {
   }
 
   return (
+    <div>
+   <Police_Home></Police_Home>
+ <br></br>
     <div style={{ display: "flex", justifyContent: "center" }}>
       <form style={{ width: "70%" }}>
         <div className="form-group">
@@ -71,5 +75,8 @@ export default function Police_Leave() {
         <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addLeave}>Apply Leave</button>
       </form>
     </div>
+
+    </div>
+
   );
 }

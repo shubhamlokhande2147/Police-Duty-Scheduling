@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
 import PoliceService from '../../service/PoliceService';
+import AM_Home from './AM_Home';
 
 
 export default function Leave_Table() {
@@ -53,6 +54,7 @@ export default function Leave_Table() {
 
   return (
     <div>
+      <AM_Home></AM_Home>
     <br></br>
         <table className="table table-striped">
   <thead>

@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
 import Am_Service from '../../service/Am_Service';
+import AM_Home from './AM_Home';
 
 
 export default function Activity_Table() {
@@ -33,6 +34,7 @@ export default function Activity_Table() {
 
   return (
     <div>
+      <AM_Home></AM_Home>
     <br></br>
     <Link to="/addactivity">
        <button type="button" name="btn" id="btn" style={{ marginBottom: '3%' }} className="btn btn-success"> Add new Activity</button>

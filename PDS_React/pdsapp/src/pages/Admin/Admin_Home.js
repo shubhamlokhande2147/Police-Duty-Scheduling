@@ -3,10 +3,15 @@ import {NavLink} from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router for navigation
 import { Navbar, Container, Image  } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
 
 import Footer from "../../Components/Footer"
 
 export default function Admin_Home() {
+  const navigate = useNavigate();
+
   return (
     <div>
         <Navbar bg="dark" variant="dark" expand="lg">
@@ -21,6 +26,7 @@ export default function Admin_Home() {
            </Nav>
          </Navbar.Collapse>
        </Container>
+       <Button className="btn btn-light" style={{ marginRight: '3%' }} onClick={() => navigate("/login")}>Logout</Button>
      </Navbar>
 
      <div dangerouslySetInnerHTML={{__html: '<marquee><b style="background-color:blue;color:white">**Chaturshringi Police Station, Shivajinagar, Pune**</b></marquee>'}} />
