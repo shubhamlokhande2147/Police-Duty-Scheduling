@@ -32,16 +32,14 @@ export default function HomeComponent() {
          
           <div className='row'>
           <section className="cards col">
-            <div className="card">
-<<<<<<< HEAD
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card1.jpeg" alt="Card 1" />
+            <div className="card col">
+              <img src="images\card1.jpeg" alt="Card 1" />
               <h3>"सद्रक्षणाय खलनिग्रहणाय"</h3>
               <p>This slogan refered from Bhagvat geeta and its meaning is "Maharashtra police protect guiltless and distroy 
-harmful people by controlling them."
-</p>
+harmful people by controlling them."</p>
             </div>
             <div className="card col">
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card2.jpeg" alt="Card 2" />
+              <img src="images\card2.jpeg" alt="Card 2" />
               <h3>Determined</h3>
               <p>Our real heros is the real identity of our society . Maharashtra police is not just a name its a dedicated, tallented, bravery group
 of police officers who not only protect us but maintain our daily life on track...our project is a small contribution to help them for scheduling their duty
@@ -49,25 +47,10 @@ in a easy way so that they will focus on major cases. Maharashtra police is a je
 police officers!</p>
             </div>
             <div className="card col">
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card3.jpg" alt="Card 3" />
+              <img src="images\card3.jpg" alt="Card 3" />
               <h3>Patriotic</h3>
               <p>Smiling face of police officers is the satisfied emotions to our society cause they smile when their assigned duty is accomplish. they are the key root of our 
-   society...proud to our heros.</p>
-=======
-              <img src="images\card1.jpeg" alt="Card 1" />
-              <h3>Card 1 Title</h3>
-              <p>Card 1 Description</p>
-            </div>
-            <div className="card col">
-              <img src="images\card2.jpeg" alt="Card 2" />
-              <h3>Card 2 Title</h3>
-              <p>Card 2 Description</p>
-            </div>
-            <div className="card col">
-              <img src="images\card3.jpeg" alt="Card 3" />
-              <h3>Card 3 Title</h3>
-              <p>Card 3 Description</p>
->>>>>>> 76e4f57b329aa51e3d109153e66417379f9c518c
+   society...proud to our heros</p>
             </div>
           </section>
           </div>
