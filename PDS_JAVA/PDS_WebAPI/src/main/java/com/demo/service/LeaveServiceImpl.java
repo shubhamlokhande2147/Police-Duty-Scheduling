@@ -3,6 +3,8 @@ package com.demo.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,5 +63,14 @@ public class LeaveServiceImpl implements ILeaveService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void updateStatus(int lvId) {
+		  Leave leave = ldao.findById(lvId).orElseThrow(() -> new EntityNotFoundException("Leave with id " + lvId + " not found"));
+	        leave.setStatus(true);
+	        ldao.save(leave);		
+	}
+	      
+	    
 
 }

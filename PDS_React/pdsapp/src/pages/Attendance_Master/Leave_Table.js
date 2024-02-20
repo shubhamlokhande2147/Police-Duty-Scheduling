@@ -22,6 +22,22 @@ export default function Leave_Table() {
 
   },[])
 
+  const updatestatus=(e,lv_id)=>{
+    console.log(e.target.id)
+
+    PoliceService.updatestatus(lv_id)
+  .then((result)=>{
+    console.log(result.data);
+    e.target.classList.remove('btn');
+    
+    fetchdata()
+    
+  })
+  .catch(()=>{})
+
+ }
+
+
 
  const deleteleave=(lv_id)=>{
 
@@ -34,10 +50,6 @@ export default function Leave_Table() {
 
  }
 
- 
- const acceptrequest=()=>{
-
- }
 
   return (
     <div>
@@ -58,12 +70,12 @@ export default function Leave_Table() {
      
       <td >{ob.lvId}</td>
       <td>{ob.fromDate}</td>
-      <td>{ob.toDate}</td>
+      <td>{ob.toDate}</td>                         
       <td>{ob.reason}</td>
       <td>{ob.pid}</td>
       <td> 
 
-         <button type="button" name="btn" id="edit_activity" className="btn btn-primary" onClick={acceptrequest} >Accept</button>&nbsp;&nbsp;&nbsp;
+         <button type="button" name="btn" id="acceptleave" className="btn btn-primary acceptleave" onClick={(e)=>{updatestatus(e,ob.lvId)}} >Accept</button>&nbsp;&nbsp;&nbsp;
 
          <button type="button" name="btn" id="deleteleave"  className="btn btn-danger" onClick={()=>{deleteleave(ob.lvId)}}>Decline</button>
        

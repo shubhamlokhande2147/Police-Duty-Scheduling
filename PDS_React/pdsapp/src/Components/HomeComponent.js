@@ -8,6 +8,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Header from './Header';
+import Footer from "./Footer"
+
 
 export default function HomeComponent() {
   return (
@@ -31,6 +33,7 @@ export default function HomeComponent() {
           <div className='row'>
           <section className="cards col">
             <div className="card">
+<<<<<<< HEAD
               <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card1.jpeg" alt="Card 1" />
               <h3>"सद्रक्षणाय खलनिग्रहणाय"</h3>
               <p>This slogan refered from Bhagvat geeta and its meaning is "Maharashtra police protect guiltless and distroy 
@@ -50,13 +53,28 @@ police officers!</p>
               <h3>Patriotic</h3>
               <p>Smiling face of police officers is the satisfied emotions to our society cause they smile when their assigned duty is accomplish. they are the key root of our 
    society...proud to our heros.</p>
+=======
+              <img src="images\card1.jpeg" alt="Card 1" />
+              <h3>Card 1 Title</h3>
+              <p>Card 1 Description</p>
+            </div>
+            <div className="card col">
+              <img src="images\card2.jpeg" alt="Card 2" />
+              <h3>Card 2 Title</h3>
+              <p>Card 2 Description</p>
+            </div>
+            <div className="card col">
+              <img src="images\card3.jpeg" alt="Card 3" />
+              <h3>Card 3 Title</h3>
+              <p>Card 3 Description</p>
+>>>>>>> 76e4f57b329aa51e3d109153e66417379f9c518c
             </div>
           </section>
           </div>
       
         </main>
-     
       </div>
+      <Footer></Footer>
    </>
  
 

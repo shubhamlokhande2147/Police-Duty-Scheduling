@@ -23,6 +23,8 @@ public interface ILeaveService {
 
 	List<Leave> getByPrice(int lpr, int hpr);
 
+	void updateStatus(int lvId);
+
 
 	//List<Police> findAll();
 	

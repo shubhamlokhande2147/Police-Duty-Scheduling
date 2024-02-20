@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.model.Activity;
@@ -67,6 +68,13 @@ System.out.println("data   "+ p);
 		lservice.deleteById(lvId);
 		return ResponseEntity.ok("Data deleted successfully");
 	}
+	
+    @PostMapping("/updatestatus/{lvId}")
+    public ResponseEntity<String> updateStatus(@PathVariable int lvId) {
+        lservice.updateStatus(lvId);
+        return ResponseEntity.ok("Status updated successfully");
+    }
+	
 	
 	
 	

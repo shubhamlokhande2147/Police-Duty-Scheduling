@@ -30,6 +30,10 @@ class PoliceService{
         return axios.delete(baseUrl+"delete_leave/"+lvId);
     }
 
+     //update status in leave
+     updatestatus(lvId){
+        return axios.post(baseUrl+"updatestatus/"+lvId)
+    }
 
 
     //  //-------------- methods for activities ---------------------------
