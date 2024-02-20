@@ -8,6 +8,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Header from './Header';
+import Footer from "./Footer"
+
 
 export default function HomeComponent() {
   return (
@@ -31,17 +33,17 @@ export default function HomeComponent() {
           <div className='row'>
           <section className="cards col">
             <div className="card">
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card1.jpeg" alt="Card 1" />
+              <img src="images\card1.jpeg" alt="Card 1" />
               <h3>Card 1 Title</h3>
               <p>Card 1 Description</p>
             </div>
             <div className="card col">
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card2.jpeg" alt="Card 2" />
+              <img src="images\card2.jpeg" alt="Card 2" />
               <h3>Card 2 Title</h3>
               <p>Card 2 Description</p>
             </div>
             <div className="card col">
-              <img src="C:\Users\91702\Desktop\pdssss\Police-Duty-Scheduling\PDS_React\pdsapp\public\images\card3.jpeg" alt="Card 3" />
+              <img src="images\card3.jpeg" alt="Card 3" />
               <h3>Card 3 Title</h3>
               <p>Card 3 Description</p>
             </div>
@@ -49,8 +51,8 @@ export default function HomeComponent() {
           </div>
       
         </main>
-     
       </div>
+      <Footer></Footer>
    </>
  
 

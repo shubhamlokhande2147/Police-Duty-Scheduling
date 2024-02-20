@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router for navigation
 import { Navbar, Container, Image  } from 'react-bootstrap';
 
-
+import Footer from "../../Components/Footer"
 
 export default function Admin_Home() {
   return (
@@ -24,7 +24,8 @@ export default function Admin_Home() {
      </Navbar>
 
      <div dangerouslySetInnerHTML={{__html: '<marquee><b style="background-color:blue;color:white">**Chaturshringi Police Station, Shivajinagar, Pune**</b></marquee>'}} />
-
+ 
+    <Footer></Footer>
     </div>
   )
 }

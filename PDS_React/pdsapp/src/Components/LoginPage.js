@@ -6,6 +6,10 @@ import LoginService from '../service/LoginService';
 import { useNavigate } from 'react-router-dom';
 
 import Header from "../Components/Header"
+import Footer from "../Components/Footer"
+import "../Components/Footer.css"
+
+
 const LoginPage = () => {
   const navigate=useNavigate()
   const [login, setLogin] = useState({});
@@ -85,6 +89,7 @@ const LoginPage = () => {
         </Form>
       </div>
     </Container>
+    <Footer></Footer>
     </>
   );
 };
