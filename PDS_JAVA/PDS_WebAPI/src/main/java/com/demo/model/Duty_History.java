@@ -17,69 +17,92 @@ public class Duty_History {
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
 	  private int dh_id;
 	  private String dh_date;
+	  private int pid;
+	  private int ac_id;
 	  
-	    @ManyToOne
-	    @JoinColumn(name = "pid")
-	    private Police police; // Represents the foreign key relationship
-		
-	    @ManyToOne
-	    @JoinColumn(name = "ac_id")
-	    private Activity activity; // Represents the foreign key relationship
-
+	  
+	  
+	  
 		public Duty_History() {
-			super();
-		}
-		
-
-		public Duty_History(int dh_id, String dh_date, Police police, Activity activity) {
-			super();
-			this.dh_id = dh_id;
-			this.dh_date = dh_date;
-			this.police = police;
-			this.activity = activity;
-		}
+		super();
+	}
 
 
-	    
-	    public int getDh_id() {
+
+
+		public Duty_History(int dh_id, String dh_date, int pid, int ac_id) {
+		super();
+		this.dh_id = dh_id;
+		this.dh_date = dh_date;
+		this.pid = pid;
+		this.ac_id = ac_id;
+	}
+
+
+
+
+		public int getDh_id() {
 			return dh_id;
 		}
+
+
+
 
 		public void setDh_id(int dh_id) {
 			this.dh_id = dh_id;
 		}
 
+
+
+
 		public String getDh_date() {
 			return dh_date;
 		}
+
+
+
 
 		public void setDh_date(String dh_date) {
 			this.dh_date = dh_date;
 		}
 
-		public Police getPolice() {
-			return police;
+
+
+
+		public int getPid() {
+			return pid;
 		}
 
-		public void setPolice(Police police) {
-			this.police = police;
+
+
+
+		public void setPid(int pid) {
+			this.pid = pid;
 		}
 
-		public Activity getActivity() {
-			return activity;
+
+
+
+		public int getAc_id() {
+			return ac_id;
 		}
 
-		public void setActivity(Activity activity) {
-			this.activity = activity;
+
+
+
+		public void setAc_id(int ac_id) {
+			this.ac_id = ac_id;
 		}
+
+
 
 
 		@Override
 		public String toString() {
-			return "Duty_History [dh_id=" + dh_id + ", dh_date=" + dh_date + ", police=" + police + ", activity="
-					+ activity + "]";
+			return "Duty_History [dh_id=" + dh_id + ", dh_date=" + dh_date + ", pid=" + pid + ", ac_id=" + ac_id + "]";
 		}
-	  
+
+
 	  
 		
 

@@ -22,5 +22,7 @@ public interface IActivityService {
 
 //	List<Activity> getactivitynames();
 	
+	//public Activity getActivityInfoByPid(int pid);
+	
 }
 

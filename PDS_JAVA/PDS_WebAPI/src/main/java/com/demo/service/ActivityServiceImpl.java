@@ -62,6 +62,11 @@ public class ActivityServiceImpl implements IActivityService {
 		System.out.println(plist);
 		return plist;
 	}
+	
+
+//    public Activity getActivityInfoByPid(int pid) {
+//        return adao.getActivityInfoByPid(pid);
+//    }
 
 //	@Override
 //	public List<Activity> getactivitynames() {

@@ -61,10 +61,12 @@ class Adm_Service{
  
 
      //----------------- insert duty in duty history----------
-       addDuty(dh_id)
+       addDuty(obj)
        {
-         return axios.post(baseUrl3+"add_duty/"+dh_id);
+         console.log("In Service ",obj)
+         return axios.post(baseUrl3+"add_duty/",obj);
        }
 }
 
 export default new Adm_Service();
+

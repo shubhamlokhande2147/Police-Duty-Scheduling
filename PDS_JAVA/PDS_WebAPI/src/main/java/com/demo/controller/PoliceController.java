@@ -83,6 +83,11 @@ public class PoliceController {
         return ResponseEntity.ok(polices);
     }
 	
+    
+    
+    
+    
+    
 	//----------------------------
 //    @GetMapping("/police/api")
 //    public List<Police> getAllPolice() {

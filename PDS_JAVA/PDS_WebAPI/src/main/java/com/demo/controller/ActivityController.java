@@ -61,19 +61,18 @@ public class ActivityController {
 	}
 	
 
+
+//    @GetMapping("/activity-info/{pid}")
+//    public ResponseEntity<Activity> getActivityInfoByPid(@PathVariable int pid) {
+//    	Activity activityInfo = aservice.getActivityInfoByPid(pid);
+//        if (activityInfo != null) {
+//            return ResponseEntity.ok(activityInfo);
+//        } else {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
+//    }
+
 	
-//	@GetMapping("/getactivitiesname")
-//	public ResponseEntity<List<Activity>> getactivitynames() {
-//		
-//		List<Activity> policeList = aservice.getactivitynames();
-////		 for (Police police : policeList) {
-////			  Activity activityName = police.getActivity();
-////		         System.out.println(activityName);
-//
-//		// }
-//		
-//		return ResponseEntity.ok(pservice.getallpolice());
-//		
-//	}
+
 	
 }

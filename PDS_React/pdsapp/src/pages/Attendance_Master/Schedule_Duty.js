@@ -14,7 +14,8 @@ export default function Schedule_Duty() {
   const [id,setid]=useState()
 
   const [fetchid,setfetchid] = useState('');
-  
+  const navigate=useNavigate();
+
 
   useEffect(() => {
     fetchActivities();
@@ -59,14 +60,14 @@ export default function Schedule_Duty() {
       const response = await Am_Service.getPolicesByActivity(fetchid);
       setPolices(response.data);
 
-      console.log("police",response.data)
+      console.log("police data",response.data)
 
     //   const pid = document.getElementById("policelist").value
     //   console.log("pid",pid)
 
-    response.data.forEach(police => {
-        console.log("PID:", police.pid);
-      });
+    // response.data.forEach(police => {
+    //     console.log("PID:", police.pid);
+    //   });
     
     } catch (error) {
       console.error('Error fetching polices:', error);
@@ -78,14 +79,16 @@ export default function Schedule_Duty() {
 
   const submithandler = ()=>
   {
-// let obj = {"pid" : setfetchid,
-//             "ac_id": }
 
-    //    const ac_id =  document.getElementById("activity").value
-    //    setfetchid(ac_id)
-    //    console.log("sdv",ac_id)
+    console.log("fetchid",fetchid)
+    console.log("selectedPolice" , selectedPolice)
 
-    Adm_Service.addDuty()       
+    let obj = {"pid" : selectedPolice,
+                "ac_id":fetchid }
+    console.log("objectdata ",obj);
+    Adm_Service.addDuty(obj).then((res)=>console.log("res" , res))  
+    navigate("/police_table")
+  
     
   }
 
@@ -126,7 +129,7 @@ export default function Schedule_Duty() {
             >
               <option value="">Select Police</option>
               {polices.map((police) => (
-                <option key={police.id} value={police.pid}>{police.name}</option>
+                <option key={police.pid} id={police.pid} value={police.pid}>{police.name}</option>
               ))}
             </select>
           </div>
