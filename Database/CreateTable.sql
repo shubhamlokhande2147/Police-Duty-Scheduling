@@ -65,14 +65,13 @@ create table P_Admin (
 
 drop table if exists Duty_History;
 CREATE TABLE Duty_History(
-  dh_id int NOT NULL PRIMARY KEY,
-  date1 VARCHAR(20),
-  police_id int,
-  activity_id int,
-   FOREIGN KEY(police_id) REFERENCES police(pid),
-   FOREIGN KEY(activity_id) REFERENCES Activity(Ac_id)
-  );
-
+  dh_id INT NOT NULL PRIMARY KEY,
+  date1 DATE DEFAULT CURRENT_DATE,
+  pid INT,
+  ac_id INT,
+  FOREIGN KEY(pid) REFERENCES Police(pid),
+  FOREIGN KEY(ac_id) REFERENCES Activity(ac_id)
+);
 
 
 drop table if exists police_Leave;
