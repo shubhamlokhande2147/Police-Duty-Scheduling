@@ -77,6 +77,12 @@ public class PoliceController {
 	}
 	
 	
+    @GetMapping("/byActivity/{ac_id}")
+    public ResponseEntity<List<Police>> getPolicesByActivity(@PathVariable int ac_id) {
+        List<Police> polices = pservice.getPolicesByActivity(ac_id);
+        return ResponseEntity.ok(polices);
+    }
+	
 	//----------------------------
 //    @GetMapping("/police/api")
 //    public List<Police> getAllPolice() {

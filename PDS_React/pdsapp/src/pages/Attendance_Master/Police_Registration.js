@@ -2,6 +2,8 @@ import React, {useEffect, useState}from 'react'
 import {useNavigate} from 'react-router-dom';
 import Adm_Service from '../../service/Am_Service';
 import Am_Service from '../../service/Am_Service';
+import swal from "sweetalert";
+
 
 export default function Police_Registration() {
 
@@ -14,6 +16,38 @@ export default function Police_Registration() {
   // const [id,setId] =useState();
   const navigate=useNavigate();
   const addPolice=()=>{
+
+
+
+     // Validate email
+     if (!/^[^#&\/\s@]+@[^#&\/\s@]+\.[^#&\/\s@]+$/.test(formdetails.email_id)) {
+      swal("Please enter a valid email address.");
+      return;
+    }
+
+      // Validate mobile number
+      if (!/^\d{10,12}$/.test(formdetails.mobile)) {
+        swal("Mobile number should be between 10 and 12 digits.");
+        return; // Exit function if validation fails
+      }
+
+      //username 
+    if (!/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]+$/.test(formdetails.username)) {
+      swal("Enter valid uername");
+      return;
+    }
+       //password
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z\d!@#$%^&*]{8,}$/.test(
+        formdetails.password )) {
+      swal(
+        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit."
+      );
+      return;
+    }
+
+
+
+
     console.log(formdetails)
     if(formdetails.belt_no===""||formdetails.name===""||formdetails.email_id===""||formdetails.desg===""||formdetails.dept===""||formdetails.mobile===""||formdetails.username===""||formdetails.password===""||formdetails.duty===""){
        alert("pls fill all the fieds");
@@ -92,9 +126,10 @@ export default function Police_Registration() {
     onChange={(event) => { setformdetails({ ...formdetails, desg: event.target.value }) }}
   >
     <option value="">Select Option</option>
-    <option value="IPS">IPS</option>
-    <option value="AM">AM</option>
-    <option value="POLICE">POLICE</option>
+    <option value="Constable">Constable</option>
+    <option value="Headconstable">Headconstable</option>
+    <option value="PSI">PSI</option>
+    <option value="PI">PI</option>
   </select>
 </div>
 

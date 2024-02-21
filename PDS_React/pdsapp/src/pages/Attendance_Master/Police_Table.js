@@ -77,9 +77,9 @@ export default function Police_Table() {
         <Link to={`/edit_police/${ob.pid}`} state={{pdata:ob}}>
         <button type="button" name="btn" id="edit_police" className="btn btn-primary">edit</button>&nbsp;&nbsp;&nbsp;
         </Link>
-        <Link to={`/view/${ob.am_id}`}>
+        {/* <Link to={`/view/${ob.am_id}`}>
         <button type="button" name="btn" id="view" className="btn btn-info">view</button>
-        </Link> 
+        </Link>  */}
       </td>
     </tr>)}
     

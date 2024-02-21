@@ -28,5 +28,7 @@ public interface IPoliceService {
 
 	String loginPolice(Login login);
 
+	List<Police> getPolicesByActivity(int ac_id);
+
 	//List<Police> findAll();
 }

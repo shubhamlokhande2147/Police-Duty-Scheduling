@@ -114,10 +114,11 @@ export default function Police_Edit() {
     onChange={(event) => { setformdetails({ ...formdetails, desg: event.target.value }) }}
   >
     <option value="">Select Option</option>
-    <option value="IPS">IPS</option>
-    <option value="IAS">IAS</option>
-    <option value="AM">AM</option>
-    <option value="POLICE">POLICE</option>
+    <option value="">Select Option</option>
+    <option value="Constable">Constable</option>
+    <option value="Headconstable">Headconstable</option>
+    <option value="PSI">PSI</option>
+    <option value="PI">PI</option>
   </select>
 </div>
 

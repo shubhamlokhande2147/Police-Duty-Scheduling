@@ -4,6 +4,8 @@ let baseUrl="http://localhost:7373/police/"
 let baseUrl2="http://localhost:7373/activity/"
 
 
+let baseUrl3="http://localhost:7373/duty_history/"
+
 
 class Adm_Service{
     //---------------- methods for polices ----------------------
@@ -50,7 +52,19 @@ class Adm_Service{
      deleteActivity(ac_id){
          return axios.delete(baseUrl2+"delete_activity/"+ac_id);
      }
+
+     //-------------------- fetch polices -------------
+     getPolicesByActivity(ac_id)
+     {
+        return axios.get(baseUrl+"byActivity/"+ac_id);
+     }
  
+
+     //----------------- insert duty in duty history----------
+       addDuty(dh_id)
+       {
+         return axios.post(baseUrl3+"add_duty/"+dh_id);
+       }
 }
 
 export default new Adm_Service();

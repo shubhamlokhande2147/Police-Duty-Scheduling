@@ -79,11 +79,21 @@ const LoginPage = () => {
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label for="username">Username:</Label>
-            <Input type="username" id="username"/>
+            {/* <Input type="username" id="username"/> */}
+            <Input type="text" id="username" placeholder="Enter the UserName" pattern="[A-Za-z ]+" title="Only Alphabet input is allowed" required />
           </FormGroup>
           <FormGroup>
             <Label for="password">Password:</Label>
-            <Input type="password" id="password"/>
+            {/* <Input type="password" id="password"/> */}
+
+            <Input 
+              type="password" 
+              id="password" 
+              placeholder="Enter the Password"
+              pattern="(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9].*[0-9])(?=.*[a-z]).{8,}" 
+              title="Password must contain one uppercase letter, one symbol, minimum two numbers, one lowercase letter, and be at least 8 characters long"
+              required 
+            />
           </FormGroup>    
           <Button type="submit" color="primary">Login</Button>
         </Form>

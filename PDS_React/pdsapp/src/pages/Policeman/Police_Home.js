@@ -63,8 +63,8 @@ export default function Police_Home() {
               {/* <Nav.Link as={NavLink} to={{ pathname: '/police_leave', state: { pid: pid } }}>Apply_Leave</Nav.Link> */}
               <Nav.Link href="/police_leave">Apply_Leave</Nav.Link>
 
-              <Nav.Link href="#duties">Duties</Nav.Link>
-              <Nav.Link href="#emergency_meet">Emergency_Meet</Nav.Link>
+              <Nav.Link href="police_duty">Duties</Nav.Link>
+              {/* <Nav.Link href="#emergency_meet">Emergency_Meet</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

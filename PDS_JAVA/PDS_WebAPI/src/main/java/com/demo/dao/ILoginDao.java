@@ -1,5 +1,7 @@
 package com.demo.dao;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.demo.model.Admin;
 import com.demo.model.Login;
+import com.demo.model.Police;
 
 @Repository
 public interface ILoginDao extends JpaRepository<Login,Integer> {
@@ -33,6 +36,8 @@ public interface ILoginDao extends JpaRepository<Login,Integer> {
 	
 	    @Query("SELECT p.pid FROM Police p WHERE p.username = :username AND p.password = :password")
 	    Integer findPidByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+
+		
 	
 	
 	

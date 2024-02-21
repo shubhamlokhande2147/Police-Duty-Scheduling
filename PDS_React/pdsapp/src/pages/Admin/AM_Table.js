@@ -67,9 +67,9 @@ export default function AM_Table() {
         <Link to={`/edit/${ob.am_id}`} state={{pdata:ob}}>
         <button type="button" name="btn" id="edit" className="btn btn-primary">edit</button>&nbsp;&nbsp;&nbsp;
         </Link>
-        <Link to={`/view/${ob.am_id}`}>
+        {/* <Link to={`/view/${ob.am_id}`}>
         <button type="button" name="btn" id="view" className="btn btn-info">view</button>
-        </Link> 
+        </Link>  */}
       </td>
     </tr>)}
     

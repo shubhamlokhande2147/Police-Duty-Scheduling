@@ -26,6 +26,9 @@ import Police_Table from './pages/Attendance_Master/Police_Table';
 import Police_Edit from './pages/Attendance_Master/Police_Edit';
 import Police_Leave from './pages/Policeman/Police_Leave';
 import Leave_Table from './pages/Attendance_Master/Leave_Table';
+import Schedule_Duty from './pages/Attendance_Master/Schedule_Duty';
+import Police_Duty from './pages/Policeman/Police_Duty';
+
 
 function App() {
 
@@ -62,12 +65,15 @@ function App() {
 
         <Route path="/police_leave" element={<Police_Leave/>}></Route>
         <Route path="/leave_table" element={<Leave_Table/>}></Route>
+      
+        <Route path="/schedule_duty" element={<Schedule_Duty/>}></Route>
+        <Route path="/police_duty" element={<Police_Duty/>}></Route>
 
 
       </Routes> 
       
-
-    </div>
+ 
+     </div>
   );
 }
 

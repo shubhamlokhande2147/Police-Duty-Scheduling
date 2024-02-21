@@ -22,7 +22,7 @@ export default function AM_Home() {
              <Nav.Link href="police_table">Policemen</Nav.Link>
              <Nav.Link href="activity_table">Activity</Nav.Link>
              <Nav.Link href="leave_table">Leave</Nav.Link>
-             <Nav.Link href="#link">Schedule Duty</Nav.Link>
+             <Nav.Link href="schedule_duty">Schedule Duty</Nav.Link>
            </Nav>
          </Navbar.Collapse>
        </Container>

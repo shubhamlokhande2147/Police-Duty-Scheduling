@@ -98,6 +98,12 @@ public class PoliceServiceImpl implements IPoliceService{
 		}
 	}
 
+	@Override
+	public List<Police> getPolicesByActivity(int ac_id) {
+        return pdao.findByActivityId(ac_id);
+
+	}
+
 //	@Override
 //	public List<Police> findAll() {
 //		// TODO Auto-generated method stub
