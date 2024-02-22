@@ -20,7 +20,7 @@ import com.demo.service.IAdminService;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class AdminController {
 	
 

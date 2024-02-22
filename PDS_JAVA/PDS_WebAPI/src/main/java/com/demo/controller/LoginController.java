@@ -27,7 +27,7 @@ import com.demo.dao.ILoginDao;
 
 @RestController
 @RequestMapping("/log")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class LoginController {
 
 

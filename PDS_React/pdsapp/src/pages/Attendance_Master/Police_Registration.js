@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Adm_Service from '../../service/Am_Service';
 import Am_Service from '../../service/Am_Service';
 import swal from "sweetalert";
+import AM_Home from './AM_Home';
 
 
 export default function Police_Registration() {
@@ -33,7 +34,7 @@ export default function Police_Registration() {
 
       //username 
     if (!/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]+$/.test(formdetails.username)) {
-      swal("Enter valid uername");
+      swal("Enter valid username");
       return;
     }
        //password
@@ -81,7 +82,12 @@ export default function Police_Registration() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <AM_Home></AM_Home>
+         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+<div style={{ width: '50%', padding: '20px' }}>
+  <img src="../images/Signup.png" alt="Logo" style={{ width: '100%' }} />
+</div> 
+
       <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="belt_no">Belt No. :</label>

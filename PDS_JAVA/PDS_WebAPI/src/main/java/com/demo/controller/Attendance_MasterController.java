@@ -20,7 +20,7 @@ import com.demo.service.IAttendance_MasterService;
 
 @RestController
 @RequestMapping("/attendance_master")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class Attendance_MasterController {
 	
 	@Autowired

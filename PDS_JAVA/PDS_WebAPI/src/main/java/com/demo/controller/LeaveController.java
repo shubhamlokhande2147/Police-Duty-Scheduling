@@ -23,7 +23,7 @@ import com.demo.service.ILeaveService;
 
 @RestController
 @RequestMapping("/leave")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class LeaveController {
 	
 	@Autowired

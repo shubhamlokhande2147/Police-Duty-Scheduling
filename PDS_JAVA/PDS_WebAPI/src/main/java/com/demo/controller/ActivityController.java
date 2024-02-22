@@ -20,7 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/activity")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ActivityController {
 
 	@Autowired
@@ -61,16 +61,16 @@ public class ActivityController {
 	}
 	
 
-
-//    @GetMapping("/activity-info/{pid}")
-//    public ResponseEntity<Activity> getActivityInfoByPid(@PathVariable int pid) {
-//    	Activity activityInfo = aservice.getActivityInfoByPid(pid);
-//        if (activityInfo != null) {
-//            return ResponseEntity.ok(activityInfo);
-//        } else {
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-//        }
-//    }
+//
+////    @GetMapping("/activity-info/{pid}")
+////    public ResponseEntity<Activity> getActivityInfoByPid(@PathVariable int pid) {
+////    	Activity activityInfo = aservice.getActivityInfoByPid(pid);
+////        if (activityInfo != null) {
+////            return ResponseEntity.ok(activityInfo);
+////        } else {
+////            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+////        }
+////    }
 
 	
 

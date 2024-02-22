@@ -93,7 +93,7 @@ import com.demo.service.IDuty_HistoryService;
 
 @RestController
 @RequestMapping("/duty_history")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class Duty_HistoryServiceController {
 	
 	@Autowired

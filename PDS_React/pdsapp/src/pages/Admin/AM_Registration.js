@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import swal from "sweetalert";
 
 import AdminService from '../../service/AdminService';
+import Admin_Home from './Admin_Home';
 
 
 export default function Am_Registration() {
@@ -30,7 +31,7 @@ export default function Am_Registration() {
 
       //username 
     if (!/(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]+$/.test(formdetails.username)) {
-      swal("Enter valid uername");
+      swal("Enter valid username");
       return;
     }
        //password
@@ -68,7 +69,12 @@ export default function Am_Registration() {
   
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+<div style={{ width: '50%', padding: '20px' }}>
+  <img src="../images/Signup.png" alt="Logo" style={{ width: '100%' }} />
+</div>     
+
       <form  style={{width:"70%"}}>
   <div className="form-group">
     <label htmlFor="belt_no">Belt No. :</label>

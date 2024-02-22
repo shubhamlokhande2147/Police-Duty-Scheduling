@@ -22,7 +22,7 @@ import com.demo.service.IPoliceService;
 
 @RestController
 @RequestMapping("/police")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class PoliceController {
 
 	@Autowired

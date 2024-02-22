@@ -41,42 +41,101 @@ export default function Police_Leave() {
   }
 
   return (
-    <div>
-   <Police_Home></Police_Home>
- <br></br>
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <form style={{ width: "70%" }}>
-        <div className="form-group">
-          <label htmlFor="fromDate">From Date :</label>
-          <input type="text" className="form-control" id="fromDate" name="fromDate"
-            value={formdetails.fromDate}
-            onChange={(event) => setFormDetails({ ...formdetails, fromDate: event.target.value })}
-            placeholder="YYYY-MM-DD"
-          />
-        </div>
+//     <div>
+//    <Police_Home></Police_Home>
+//  <br></br>
+//     <div style={{ display: "flex", justifyContent: "center" }}>
+     
+     
+//       <form style={{ width: "70%" }}>
+        
+//         <div className="form-group">
+//           <label htmlFor="fromDate">From Date :</label>
+//           <input type="text" className="form-control" id="fromDate" name="fromDate"
+//             value={formdetails.fromDate}
+//             onChange={(event) => setFormDetails({ ...formdetails, fromDate: event.target.value })}
+//             placeholder="YYYY-MM-DD"
+//           />
+//         </div>
 
-        <div className="form-group">
-          <label htmlFor="toDate">To Date :</label>
-          <input type="text" className="form-control" id="toDate" name="toDate"
-            value={formdetails.toDate}
-            onChange={(event) => setFormDetails({ ...formdetails, toDate: event.target.value })}
-            placeholder="YYYY-MM-DD"
-          />
-        </div>
+//         <div className="form-group">
+//           <label htmlFor="toDate">To Date :</label>
+//           <input type="text" className="form-control" id="toDate" name="toDate"
+//             value={formdetails.toDate}
+//             onChange={(event) => setFormDetails({ ...formdetails, toDate: event.target.value })}
+//             placeholder="YYYY-MM-DD"
+//           />
+//         </div>
 
-        <div className="form-group">
-          <label htmlFor="reason">Reason :</label>
-          <input type="text" className="form-control" id="reason" name="reason"
-            value={formdetails.reason}
-            onChange={(event) => setFormDetails({ ...formdetails, reason: event.target.value })}
-          />
-        </div>
+//         <div className="form-group">
+//           <label htmlFor="reason">Reason :</label>
+//           <input type="text" className="form-control" id="reason" name="reason"
+//             value={formdetails.reason}
+//             onChange={(event) => setFormDetails({ ...formdetails, reason: event.target.value })}
+//           />
+//         </div>
 
-        <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addLeave}>Apply Leave</button>
-      </form>
+//         <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addLeave}>Apply Leave</button>
+//       </form>
+//     </div>
+
+//     </div>
+
+//   );
+// }
+<div>
+      <Police_Home />
+      <br />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ width: '30%' }}>
+          <img src="../images/Leave.png" alt="Logo" style={{ width: '100%' }} />
+        </div>
+        <div style={{ width: '70%', padding: '20px' }}>
+          <form style={{ width: '100%' }}>
+            <div className="form-group">
+              <label htmlFor="fromDate">From Date :</label>
+              <input
+                type="text"
+                className="form-control"
+                id="fromDate"
+                name="fromDate"
+                value={formdetails.fromDate}
+                onChange={event => setFormDetails({ ...formdetails, fromDate: event.target.value })}
+                placeholder="YYYY-MM-DD"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="toDate">To Date :</label>
+              <input
+                type="text"
+                className="form-control"
+                id="toDate"
+                name="toDate"
+                value={formdetails.toDate}
+                onChange={event => setFormDetails({ ...formdetails, toDate: event.target.value })}
+                placeholder="YYYY-MM-DD"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="reason">Reason :</label>
+              <input
+                type="text"
+                className="form-control"
+                id="reason"
+                name="reason"
+                value={formdetails.reason}
+                onChange={event => setFormDetails({ ...formdetails, reason: event.target.value })}
+              />
+            </div>
+
+            <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addLeave}>
+              Apply Leave
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    </div>
-
   );
 }
