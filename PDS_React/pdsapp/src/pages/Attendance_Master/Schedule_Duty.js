@@ -99,21 +99,22 @@ export default function Schedule_Duty() {
     <div>
         <AM_Home></AM_Home>
         <br></br>
-      {/* <div style={{ display: "flex", justifyContent: "center" }}>
-        <form style={{ width: "70%" }}>
-          */}
+      
+    <div style={{marginTop:"2%"}}> <h2>Schedule Duty</h2></div> 
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', width: '70%' }}>
           {/* Image */}
           <div style={{ flex: '1' }}>
-            <img src="../images/Schedule.png" alt="Your Image" style={{ maxWidth: '100%', height: 'auto' }} />
+            <img src="../images/Schedule.png" alt="Your Image" style={{ maxWidth: '100%', height: 'auto', marginTop:"30px" }} />
           </div>
+          
+          
           <form style={{ flex: '2', marginLeft: '20px' }}>
 
          
          
-          <div className="form-group">
+          <div className="form-group" style={{ marginTop:"10px" }}  >
             <label htmlFor="activity">Activity:</label>
             <select
               className="form-control"

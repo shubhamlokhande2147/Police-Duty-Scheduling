@@ -24,8 +24,15 @@ export default function Activity_Registration() {
     })
   }
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-    <form  style={{width:"70%"}}>
+  <>
+    <div style={{marginTop:"5%"}}> <h2>Register Activity</h2></div> 
+    <div style={{ display: 'flex', justifyContent: 'center' }}> 
+
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src="../images/Activity.JPG" alt="Your Image" style={{ width: '200px', marginRight: '20px', marginTop:"1px" }} />
+    </div>
+   
+    <form  style={{width:"70%", marginTop:"40px"}}>
   <div className="form-group">
     <label htmlFor="name">Name :</label>
     <input type="text" className="form-control" id="name" name="name"
@@ -52,6 +59,6 @@ export default function Activity_Registration() {
 
   <button type="button" className="btn btn-primary" style={{ marginTop: '4%' }} onClick={addActivity}>Register</button>
 </form>
-    </div>
+    </div></>
   )
 }
