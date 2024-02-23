@@ -75,7 +75,7 @@ export default function Police_Table() {
          <button type="button" name="btn" id="deletepolice"  className="btn btn-danger" onClick={()=>{deletepolice(ob.pid)}}>delete</button>&nbsp;&nbsp;&nbsp;
         
         <Link to={`/edit_police/${ob.pid}`} state={{pdata:ob}}>
-        <button type="button" name="btn" id="edit_police" className="btn btn-primary">edit</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" name="btn" id="edit_police" className="btn btn-primary">edit</button>
         </Link>
         {/* <Link to={`/view/${ob.am_id}`}>
         <button type="button" name="btn" id="view" className="btn btn-info">view</button>

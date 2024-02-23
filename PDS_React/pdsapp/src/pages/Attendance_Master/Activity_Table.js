@@ -46,7 +46,7 @@ export default function Activity_Table() {
       <th scope="col">Name</th>
       <th scope="col">Location</th>
       <th scope="col">Shift Time</th>
-      <th>action</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -59,7 +59,7 @@ export default function Activity_Table() {
 
          <button type="button" name="btn" id="delete"  className="btn btn-danger" onClick={()=>{deleteActivity(ob.ac_id)}}>delete</button>&nbsp;&nbsp;&nbsp;
         <Link to={`/edit_activity/${ob.ac_id}`} state={{pdata:ob}}>
-        <button type="button" name="btn" id="edit_activity" className="btn btn-primary">edit</button>&nbsp;&nbsp;&nbsp;
+        <button type="button" name="btn" id="edit_activity" className="btn btn-primary">edit</button>
         </Link>
         {/* <Link to={`/view/${ob.ac_id}`}>
         <button type="button" name="btn" id="view" className="btn btn-info">view</button>

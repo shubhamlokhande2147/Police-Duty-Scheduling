@@ -89,7 +89,12 @@ export default function Police_Duty() {
               <th style={{ border: '1px solid #dddddd', backgroundColor: '#f2f2f2', padding: '8px', textAlign: 'left' }}>Activity</th>
               <th style={{ border: '1px solid #dddddd', backgroundColor: '#f2f2f2', padding: '8px', textAlign: 'left' }}>Location</th>
               <th style={{ border: '1px solid #dddddd', backgroundColor: '#f2f2f2', padding: '8px', textAlign: 'left' }}>Shift</th>
-            </tr>
+            </tr>   <tr>
+               <td>31</td>
+               <td>Damini Marshal</td>
+               <td>Pune</td>
+               <td>Night</td>
+             </tr>
           </thead>
           <tbody>
             {dutyData.map((duty) => (
@@ -100,6 +105,7 @@ export default function Police_Duty() {
                 <td style={{ border: '1px solid #dddddd', padding: '8px' }}>{duty.shift}</td>
               </tr>
             ))}
+          
           </tbody>
         </table>
       </div>
