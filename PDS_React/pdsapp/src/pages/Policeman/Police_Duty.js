@@ -81,7 +81,7 @@ export default function Police_Duty() {
       <br />
       <h2 style={{ textAlign: 'center' }}>Duty Details</h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <img src="../images/Duty.png" alt="Duty" style={{ width: '50%', marginRight: '20px' }} />
+        <img src="../images/Duty.png" alt="Duty" style={{ width: '50%', marginRight: '5px' }} />
         <table style={{ borderCollapse: 'collapse', width: '50%', textAlign: 'center', marginTop:'20px', marginRight :'30px' }}>
           <thead>
             <tr>
