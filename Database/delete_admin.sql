@@ -10,7 +10,7 @@ FOR EACH ROW
 BEGIN
     -- Delete the corresponding entry from the `login` table where the `username` matches the deleted police entry's username
     DELETE FROM login 
-    WHERE username = OLD.username;
+    WHERE username = OLD.username AND role_id = 1;
 END$$
 
 -- Reset the delimiter back to semicolon
