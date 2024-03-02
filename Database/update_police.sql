@@ -8,11 +8,8 @@ DELIMITER $$
 CREATE TRIGGER update_police AFTER UPDATE ON police
 FOR EACH ROW
 BEGIN
-    -- Update the `role_id` in the `login` table where the `username` and `password` match
     UPDATE login 
     SET role_id = 3 
     WHERE username = OLD.username AND password = OLD.password;
 END$$
-
--- Reset the delimiter back to semicolon
 DELIMITER ;
