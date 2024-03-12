@@ -14,9 +14,9 @@ import com.demo.model.Activity;
 public interface IActivityDao extends JpaRepository<Activity, Integer> {
 
 	
-    @Query(value="select * from producttab11 where price between :lpr and :hpr",nativeQuery = true)
+   // @Query(value="select * from producttab11 where price between :lpr and :hpr",nativeQuery = true)
 	//@Query(value="select p from Product p where price between :lpr and :hpr")
-	List<Activity> findbyPrice(int lpr, int hpr);
+	//List<Activity> findbyPrice(int lpr, int hpr);
     
     //@Query(value="SELECT a.name, a.location, a.shift " + "FROM Activity a " +  "INNER JOIN a.polices p"+ "WHERE p.pid = :pid",nativeQuery = true)
    // Activity getActivityInfoByPid(int pid);

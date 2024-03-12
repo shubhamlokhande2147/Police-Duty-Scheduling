@@ -13,6 +13,7 @@ create table Attendance_Master (
    );
 
 
+
 drop table if exists Activity;
 create table Activity (
         AC_id int PRIMARY KEY auto_increment,

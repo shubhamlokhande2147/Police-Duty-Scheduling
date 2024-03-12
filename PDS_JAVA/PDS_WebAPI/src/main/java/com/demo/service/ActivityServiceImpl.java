@@ -56,12 +56,12 @@ public class ActivityServiceImpl implements IActivityService {
 		
 	}
 
-	@Override
-	public List<Activity> getByPrice(int lpr, int hpr) {
-		List<Activity> plist = adao.findbyPrice(lpr,hpr);
-		System.out.println(plist);
-		return plist;
-	}
+//	@Override
+//	public List<Activity> getByPrice(int lpr, int hpr) {
+//		List<Activity> plist = adao.findbyPrice(lpr,hpr);
+//		System.out.println(plist);
+//		return plist;
+//	}
 	
 
 //    public Activity getActivityInfoByPid(int pid) {
