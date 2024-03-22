@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDSWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c03db06304f82249bb49754faaade1763b1d9c37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc9b11f3aa7e2ba788524949d5f508d92fb9dcdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDSWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDSWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
