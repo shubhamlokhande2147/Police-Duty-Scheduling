@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Demo.Models;
+using Demo.Services;
+
 
 namespace Demo.Controllers
 {
@@ -30,14 +33,14 @@ namespace Demo.Controllers
                 return NotFound();
         }
 
-        [HttpPost("add_activity")]
+        [HttpPost("add_activity/{ac_id}")]
         public IActionResult AddActivity(Activity p)
         {
             _activityService.AddNewActivity(p);
             return Ok("Data added successfully");
         }
 
-        [HttpPut("update_activity")]
+        [HttpPut("update_activity/{ac_id}")]
         public IActionResult UpdateActivity(Activity p)
         {
             _activityService.UpdateById(p);
