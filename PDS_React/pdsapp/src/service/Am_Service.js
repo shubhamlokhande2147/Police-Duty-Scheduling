@@ -1,8 +1,8 @@
 import axios from 'axios';
 let baseUrl="http://localhost:7373/police/"
 
-// let baseUrl2="http://localhost:7373/activity/" 
-let baseUrl2="http://localhost:5122/activity/"  //it is using .net
+let baseUrl2="http://localhost:7373/activity/" 
+// let baseUrl2="http://localhost:5122/activity/"  //it is using .net
 
 
 let baseUrl3="http://localhost:7373/duty_history/"
