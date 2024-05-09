@@ -157,6 +157,7 @@ const LoginPage = () => {
           console.log(response.data)
           navigate("/am_master_home")
           // return <Navigate to="am_master_home" />;
+          
         }
         
         else if (response.data.roleId === 3) {
